@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import logoUrl from "@assets/logo.png";
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img 
-                src="/attached_assets/509660646_122109824870908184_6603451833094892468_n_1766775658238.jpg" 
+                src={logoUrl}
                 alt="Inclusion Bridge Africa Logo" 
                 className="w-12 h-12 object-contain rounded-lg bg-white p-1"
               />

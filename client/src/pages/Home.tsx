@@ -32,19 +32,20 @@ export default function Home() {
       <Navigation />
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-[100vh] md:min-h-[90vh] flex items-center pt-20 overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 z-0 bg-primary">
           <video
             ref={videoRef}
             src={heroVideo}
-            className="w-full h-full border-none opacity-60 pointer-events-none scale-[1.5]"
+            className="w-full h-full object-cover pointer-events-none"
             autoPlay
             loop
             muted
             playsInline
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/20 to-background/90" />
+
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/30 to-background/90" />
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">

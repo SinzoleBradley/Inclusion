@@ -6,14 +6,14 @@ import { Linkedin, Twitter, Mail } from "lucide-react";
 // Mock Data for Team Members
 const TEAM_MEMBERS = [
   {
-    name: "Sarah Mbeki",
-    role: "Executive Director",
+    name: "Victor Maingi",
+    role: "CEO & Founder",
     bio: "A disability rights advocate with over 15 years of experience in policy reform and inclusive development across East Africa.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "David Ochieng",
-    role: "Head of Operations",
+    name: "Roselyn Alaru",
+    role: "Co-founder",
     bio: "Focuses on scaling our community outreach programs and ensuring resources reach the most remote areas effectively.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },

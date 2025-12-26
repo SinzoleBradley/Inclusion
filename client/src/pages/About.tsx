@@ -1,6 +1,35 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SectionHeader } from "@/components/SectionHeader";
+import { Linkedin, Twitter, Mail } from "lucide-react";
+
+// Mock Data for Team Members
+const TEAM_MEMBERS = [
+  {
+    name: "Sarah Mbeki",
+    role: "Executive Director",
+    bio: "A disability rights advocate with over 15 years of experience in policy reform and inclusive development across East Africa.",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "David Ochieng",
+    role: "Head of Operations",
+    bio: "Focuses on scaling our community outreach programs and ensuring resources reach the most remote areas effectively.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Grace Njoroge",
+    role: "Lead Accessibility Tech",
+    bio: "Driving our digital inclusion initiatives, ensuring that technology serves as a bridge rather than a barrier.",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Samuel Kalu",
+    role: "Community Liaison",
+    bio: "Building trust and partnerships with local grassroots organizations to ensure our impact is sustainable.",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+];
 
 export default function About() {
   return (
@@ -18,6 +47,7 @@ export default function About() {
         </div>
       </div>
 
+      {/* Story Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -35,7 +65,6 @@ export default function About() {
             </div>
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-                 {/* group of people working together diverse */}
                 <img 
                   src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                   alt="Team collaboration" 
@@ -52,7 +81,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Values Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader title="Our Core Values" centered={true} />
@@ -69,6 +98,59 @@ export default function About() {
               <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-border hover:shadow-md transition-all">
                 <h4 className="text-xl font-bold text-primary mb-3 font-display">{value.title}</h4>
                 <p className="text-muted-foreground">{value.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PREMIUM TEAM SECTION */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        {/* Decorative background blur */}
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl opacity-50 pointer-events-none" />
+        
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <SectionHeader 
+            title="Meet the Leadership" 
+            subtitle="The passionate individuals driving our mission forward."
+            centered={true}
+          />
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+            {TEAM_MEMBERS.map((member, index) => (
+              <div 
+                key={index} 
+                className="group relative flex flex-col items-center text-center"
+              >
+                {/* Image Card */}
+                <div className="w-full aspect-[3/4] overflow-hidden rounded-2xl mb-6 relative shadow-lg bg-gray-100">
+                  {/* Overlay for social icons on hover (Desktop) */}
+                  <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center gap-4">
+                    <button className="p-2 bg-white rounded-full text-primary hover:text-secondary transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300">
+                      <Linkedin size={20} />
+                    </button>
+                    <button className="p-2 bg-white rounded-full text-primary hover:text-secondary transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75">
+                      <Twitter size={20} />
+                    </button>
+                    <button className="p-2 bg-white rounded-full text-primary hover:text-secondary transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 delay-100">
+                      <Mail size={20} />
+                    </button>
+                  </div>
+                  
+                  {/* The Image */}
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:scale-110 filter grayscale group-hover:grayscale-0"
+                  />
+                </div>
+
+                {/* Text Content */}
+                <h4 className="text-xl font-bold text-primary font-display">{member.name}</h4>
+                <p className="text-sm font-medium text-secondary uppercase tracking-wider mb-2">{member.role}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed max-w-[250px]">
+                  {member.bio}
+                </p>
               </div>
             ))}
           </div>

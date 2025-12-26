@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* HSL Values */
+  
+  /* Primary: Dignified Royal Purple */
+  --primary: 265 48% 45%; 
+  --primary-foreground: 0 0% 100%;
+
+  /* Secondary: Optimistic Warm Yellow (High contrast adjusted) */
+  --secondary: 45 93% 47%; 
+  --secondary-foreground: 265 48% 20%;
+
+  /* Backgrounds & Neutrals */
+  --background: 0 0% 99%;
+  --foreground: 222 47% 11%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  
+  --accent: 265 48% 96%;
+  --accent-foreground: 265 48% 45%;
+  
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 265 48% 45%;
+
+  --radius: 1rem;
+  
+  /* Font Variables for use in CSS if needed directly */
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight font-bold;
+  }
+}
+
+/* Accessibility Modes */
+:root.text-large {
+  font-size: 115%;
+}
+
+:root.text-extra-large {
+  font-size: 130%;
+}
+
+:root.high-contrast {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
+  --primary: 265 80% 25%;
+  --secondary: 45 100% 35%;
+  --muted-foreground: 0 0% 10%;
+  --border: 0 0% 0%;
+}
+
+.dark:root.high-contrast {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --primary: 265 80% 75%;
+  --secondary: 45 100% 65%;
+  --muted-foreground: 0 0% 90%;
+  --border: 0 0% 100%;
+}
+
+:root.grayscale-mode {
+  filter: grayscale(100%);
+}
+
+.dark {
+  --background: 265 48% 5%;
+  --foreground: 0 0% 98%;
+  --card: 265 48% 8%;
+  --card-foreground: 0 0% 98%;
+  --popover: 265 48% 8%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 265 48% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 45 93% 47%;
+  --secondary-foreground: 265 48% 10%;
+  --muted: 265 48% 15%;
+  --muted-foreground: 265 48% 70%;
+  --accent: 265 48% 15%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 265 48% 20%;
+  --input: 265 48% 20%;
+  --ring: 265 48% 60%;
+}
+
+/* Hide Google Translate Bar */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-icon,
+.goog-te-gadget-simple img,
+.goog-te-menu-value span:nth-child(2),
+.goog-te-menu-value span:nth-child(3) {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-te-gadget-simple {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Subtle Pattern Overlay */
+  .bg-pattern {
+    background-image: radial-gradient(var(--primary) 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    opacity: 0.03;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+}

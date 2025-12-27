@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowRight, Users, BookOpen, Heart, Award, Pause, Play } from "lucide-react";
+import { ArrowRight, Users, BookOpen, Heart, Award, Pause, Play, MessageSquare, Megaphone, Handshake, CheckCircle2 } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -100,6 +100,110 @@ export default function Home() {
           className="absolute bottom-0 left-0 right-0 h-24 bg-background"
           style={{ clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 100%)" }}
         ></div>
+      </section>
+
+      {/* OUR PILLARS SECTION */}
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -z-10" />
+        <div className="container mx-auto px-4 md:px-6">
+          <SectionHeader
+            title="Our Pillars"
+            subtitle="The fundamental areas of our work to create a truly inclusive society."
+          />
+
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: MessageSquare,
+                title: "1. Making communication Accessible",
+                activities: [
+                  "Sign language Training",
+                  "Sign language interpretation",
+                  "Making Easy to read Materials",
+                  "Translation of Text to braille",
+                  "Training on the use of Text to speech softwares",
+                ],
+              },
+              {
+                icon: Megaphone,
+                title: "2. Advocacy",
+                activities: [
+                  "Disability Inclusion and Awareness Training",
+                  "Facilities Disability assessment Audit",
+                ],
+              },
+              {
+                icon: Handshake,
+                title: "3. Partnerships",
+                activities: [
+                  "Projects Co-creation and design",
+                  "Linkages",
+                ],
+                stats: [
+                  "No. Of companies linked with Persons with disabilities Talent Pool",
+                  "Persons with Disabilities linked to Job opportunities",
+                ]
+              },
+            ].map((pillar, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ y: -5 }}
+                className="bg-white p-8 rounded-3xl shadow-lg shadow-gray-100 border border-gray-100 hover:border-primary/20 transition-all flex flex-col h-full"
+              >
+                <div className="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 text-primary">
+                  <pillar.icon className="w-7 h-7" />
+                </div>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900 font-display">
+                  {pillar.title}
+                </h3>
+                
+                <div className="space-y-4 flex-grow">
+                  <div>
+                    <h4 className="text-sm font-bold text-secondary uppercase tracking-wider mb-3">Activities</h4>
+                    <ul className="space-y-2">
+                      {pillar.activities.map((activity, i) => (
+                        <li key={i} className="flex items-start gap-2 text-muted-foreground">
+                          <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                          <span>{activity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {pillar.stats && (
+                    <div className="mt-6 pt-6 border-t border-gray-100">
+                      <ul className="space-y-3">
+                        {pillar.stats.map((stat, i) => (
+                          <li key={i} className="bg-primary/5 p-3 rounded-xl text-primary font-medium text-sm">
+                            {stat}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OUR PARTNERS SECTION */}
+      <section className="py-20 bg-gray-50/30">
+        <div className="container mx-auto px-4 md:px-6">
+          <SectionHeader
+            title="Our Partners"
+            subtitle="Working together with leading organizations to scale our impact."
+            centered
+          />
+          
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500 mt-12">
+            {/* Placeholder logos for partners */}
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div key={i} className="h-12 w-32 bg-gray-200 rounded animate-pulse" />
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* MISSION / WHO WE ARE */}
@@ -236,16 +340,15 @@ export default function Home() {
             Be the Bridge to Inclusion
           </h2>
           <p className="text-xl text-white/80 mb-10 leading-relaxed">
-            Your support transforms lives. Whether through volunteering your
-            time or donating funds, you can help build a more accessible Africa.
+            Join us in empowering abilities and bridging communities across Africa. Your involvement helps us create a more accessible and equitable world for persons with disabilities.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Link href="/donate">
+            <Link href="/contact">
               <Button
                 size="lg"
                 className="w-full sm:w-auto h-14 px-8 text-lg rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold shadow-lg shadow-black/20"
               >
-                Donate Today
+                Get In Touch
               </Button>
             </Link>
             <Link href="/volunteer">

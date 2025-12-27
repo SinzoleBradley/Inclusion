@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Home, Info, Heart, Mail, ArrowLeft, Search } from "lucide-react";
+import { Home, Info, Heart, Mail, ArrowLeft, Search, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import logoUrl from "@assets/logo.png";
@@ -8,9 +8,10 @@ import logoUrl from "@assets/logo.png";
 export default function NotFound() {
   const quickLinks = [
     { name: "Home", href: "/", icon: Home, description: "Back to the main landing page" },
-    { name: "About Us", href: "/#about", icon: Info, description: "Learn about our mission and vision" },
-    { name: "Donate", href: "/#donate", icon: Heart, description: "Support our inclusive community" },
-    { name: "Contact", href: "/#contact", icon: Mail, description: "Get in touch with our team" },
+    { name: "About Us", href: "/about", icon: Info, description: "Learn about our mission and vision" },
+    { name: "Programs & pillars", href: "/programs", icon: BookOpen, description: "See what we offer" },
+    { name: "Donate", href: "/donate", icon: Heart, description: "Support our inclusive community" },
+    { name: "Contact", href: "/contact", icon: Mail, description: "Get in touch with our team" },
   ];
 
   return (

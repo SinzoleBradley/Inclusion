@@ -15,14 +15,56 @@ export default function Programs() {
       <div className="pt-32 pb-20 bg-primary/5">
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
-            title="Our Programs" 
-            subtitle="Comprehensive initiatives designed to empower, educate, and advocate."
+            title="Our Programs & Pillars" 
+            subtitle="Comprehensive initiatives designed to empower, educate, and advocate through our three core pillars."
             centered={true}
           />
         </div>
       </div>
 
-      <section className="py-20">
+      {/* Our Pillars Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-3xl bg-primary/5 border border-primary/10">
+              <h3 className="text-xl font-bold text-primary mb-4">1. Making communication Accessible</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>• Sign language Training</li>
+                <li>• Sign language interpretation</li>
+                <li>• Making Easy to read Materials</li>
+                <li>• Translation of Text to braille</li>
+                <li>• Training on the use of Text to speech softwares</li>
+              </ul>
+            </div>
+            <div className="p-8 rounded-3xl bg-secondary/5 border border-secondary/10">
+              <h3 className="text-xl font-bold text-secondary-foreground mb-4">2. Advocacy</h3>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>• Disability Inclusion and Awareness Training</li>
+                <li>• Facilities Disability assessment Audit</li>
+              </ul>
+            </div>
+            <div className="p-8 rounded-3xl bg-primary/5 border border-primary/10">
+              <h3 className="text-xl font-bold text-primary mb-4">3. Partnerships</h3>
+              <ul className="space-y-2 text-muted-foreground mb-6">
+                <li>• Projects Co-creation and design</li>
+                <li>• Linkages</li>
+              </ul>
+              <div className="pt-6 border-t border-primary/10 space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-sm font-medium">Companies Linked</span>
+                  <span className="text-2xl font-bold text-primary">15+</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm font-medium">Jobs Secured</span>
+                  <span className="text-2xl font-bold text-primary">50+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           {isLoading ? (
             <div className="flex justify-center items-center py-20">

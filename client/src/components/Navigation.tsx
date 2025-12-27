@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X, PhoneCall } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -8,9 +8,9 @@ import logoUrl from "@assets/logo.png";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "Who We Are" },
-  { href: "/programs", label: "What We Do" },
-  { href: "/impact", label: "Our Impact" },
+  { href: "/about", label: "About Us" },
+  { href: "/programs", label: "Programs & Pillars" },
+  { href: "/impact", label: "Impact" },
 ];
 
 export function Navigation() {
@@ -72,15 +72,15 @@ export function Navigation() {
               {link.label}
             </Link>
           ))}
-          <Link href="/donate">
+          <Link href="/contact">
             <Button 
               className={cn(
                 "bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold shadow-lg shadow-secondary/20 hover:shadow-xl hover:-translate-y-0.5 transition-all rounded-full",
                 isScrolled ? "px-4 py-1 h-8 text-xs" : "px-6"
               )}
             >
-              <Heart className={cn("mr-2 fill-current", isScrolled ? "w-3 h-3" : "w-4 h-4")} />
-              Donate
+              <PhoneCall className={cn("mr-2 fill-current", isScrolled ? "w-3 h-3" : "w-4 h-4")} />
+              Contact Us
             </Button>
           </Link>
         </div>
@@ -113,9 +113,9 @@ export function Navigation() {
                   ))}
                 </div>
                 <div className="border-t pt-6 px-4">
-                  <Link href="/donate" onClick={() => setIsOpen(false)}>
+                  <Link href="/contact" onClick={() => setIsOpen(false)}>
                     <Button className="w-full bg-secondary text-secondary-foreground font-bold rounded-xl h-12 text-lg">
-                      Donate Now
+                      Contact Us
                     </Button>
                   </Link>
                 </div>

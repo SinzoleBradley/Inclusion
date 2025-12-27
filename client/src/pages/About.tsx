@@ -47,6 +47,18 @@ export default function About() {
         </div>
       </div>
 
+      {/* Our Partners Section */}
+      <section className="py-12 bg-white border-b">
+        <div className="container mx-auto px-4 md:px-6">
+          <p className="text-center text-sm font-bold text-muted-foreground uppercase tracking-widest mb-8">Our Partners</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div key={i} className="h-8 w-24 bg-gray-200 rounded animate-pulse" />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Story Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 md:px-6">

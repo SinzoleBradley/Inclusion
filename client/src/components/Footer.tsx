@@ -38,6 +38,7 @@ export function Footer() {
                 { label: "Our Programs", href: "/programs" },
                 { label: "Impact Stories", href: "/impact" },
                 { label: "Get Involved", href: "/volunteer" },
+                { label: "Contact Us", href: "/contact" },
                 { label: "Donate", href: "/donate" },
               ].map((link) => (
                 <li key={link.href}>

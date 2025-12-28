@@ -15,6 +15,13 @@ import {
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 
+declare global {
+  interface Window {
+    google: any;
+    googleTranslateElementInit: () => void;
+  }
+}
+
 const LANGUAGES = [
   { code: "en", label: "English" },
   { code: "fr", label: "Français" },

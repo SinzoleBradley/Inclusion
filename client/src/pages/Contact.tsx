@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -64,8 +62,6 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
-      
       <div className="pt-32 pb-20 bg-primary text-white text-center">
         <div className="container mx-auto px-4">
           <SectionHeader 
@@ -194,7 +190,6 @@ export default function Contact() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

@@ -1,5 +1,3 @@
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ProgramCard } from "@/components/ProgramCard";
 import { usePrograms } from "@/hooks/use-content";
@@ -10,8 +8,6 @@ export default function Programs() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
-      
       <div className="pt-32 pb-20 bg-primary/5">
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
@@ -103,7 +99,6 @@ export default function Programs() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

@@ -29,8 +29,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background font-sans">
-      <Navigation />
-
       {/* HERO SECTION */}
       <section className="relative min-h-[100vh] md:min-h-[110vh] flex items-center pt-20 overflow-hidden">
         {/* Video Background */}
@@ -355,7 +353,6 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

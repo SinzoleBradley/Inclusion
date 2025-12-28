@@ -1,12 +1,8 @@
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
 import { SectionHeader } from "@/components/SectionHeader";
 
 export default function Accessibility() {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
-      
       <div className="pt-32 pb-20 container mx-auto px-4 md:px-6">
         <SectionHeader title="Accessibility Statement" centered={false} />
         
@@ -45,7 +41,6 @@ export default function Accessibility() {
         </div>
       </div>
 
-      <Footer />
     </div>
   );
 }

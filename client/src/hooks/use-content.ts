@@ -1,5 +1,6 @@
 import { useQuery, useMutation } from "@tanstack/react-query";
-import { api, type InsertMessage } from "@shared/routes";
+import { api } from "@shared/routes";
+import { type InsertMessage } from "@shared/schema";
 
 // Programs Hooks
 export function usePrograms() {

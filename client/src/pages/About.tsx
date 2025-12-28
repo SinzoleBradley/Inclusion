@@ -58,8 +58,6 @@ const TEAM_MEMBERS = [
 export default function About() {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
-      
       {/* Header */}
       <div className="pt-32 pb-20 bg-primary/5">
         <div className="container mx-auto px-4 md:px-6">
@@ -210,7 +208,6 @@ export default function About() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

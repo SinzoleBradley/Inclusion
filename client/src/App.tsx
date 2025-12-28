@@ -1,10 +1,8 @@
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { AccessibilityWidget } from "@/components/AccessibilityWidget";
-import { Preloader } from "@/components/Preloader";
+import { Layout } from "@/components/Layout";
 import NotFound from "@/pages/not-found";
 
 // Page Imports
@@ -38,13 +36,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="antialiased selection:bg-yellow-200 selection:text-purple-900">
-          <Preloader />
+        <Layout>
           <Router />
-          <div id="google_translate_element" style={{ display: 'none' }} />
-          <AccessibilityWidget />
-          <Toaster />
-        </div>
+        </Layout>
       </TooltipProvider>
     </QueryClientProvider>
   );

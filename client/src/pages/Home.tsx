@@ -56,15 +56,13 @@ export default function Home() {
             className="text-white space-y-6"
           >
             <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium text-secondary">
-              Building Bridges, Breaking Barriers
+              HANDS ON INCLUSION
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-display text-balance">
-              Empowering Abilities,{" "}
-              <span className="text-secondary">Bridging Communities</span>
+              INCLUSION BRIDGE AFRICA
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-lg leading-relaxed">
-              We champion disability inclusion across Africa through advocacy,
-              skills training, and community empowerment programs.
+              A society where every person with a disability is fully included, empowered, and engaged in all spheres of life
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Link href="/programs">
@@ -115,34 +113,30 @@ export default function Home() {
             {[
               {
                 icon: MessageSquare,
-                title: "1. Making communication Accessible",
+                title: "Accessible Communication",
                 activities: [
-                  "Sign language Training",
-                  "Sign language interpretation",
-                  "Making Easy to read Materials",
-                  "Translation of Text to braille",
-                  "Training on the use of Text to speech softwares",
+                  "Sign language training for individuals and organizations",
+                  "Professional sign language interpretation services",
+                  "Promoting barrier-free information access for persons with diverse disabilities",
                 ],
               },
               {
-                icon: Megaphone,
-                title: "2. Advocacy",
+                icon: Award,
+                title: "Inclusive Systems & Environments",
                 activities: [
-                  "Disability Inclusion and Awareness Training",
-                  "Facilities Disability assessment Audit",
+                  "Disability inclusion training (workplace, programs, events, and community)",
+                  "Accessibility audits with practical recommendations for organizations and companies",
+                  "Co-creation of inclusive policies, practices, and environments",
                 ],
               },
               {
                 icon: Handshake,
-                title: "3. Partnerships",
+                title: "Empowerment & Advocacy",
                 activities: [
-                  "Projects Co-creation and design",
-                  "Linkages",
+                  "Linkages for persons with disabilities to programs, training, and employment opportunities",
+                  "Connecting organizations with disability-focused networks and communities",
+                  "Advocacy for the rights, visibility, and meaningful participation of persons with disabilities",
                 ],
-                stats: [
-                  "No. Of companies linked with Persons with disabilities Talent Pool",
-                  "Persons with Disabilities linked to Job opportunities",
-                ]
               },
             ].map((pillar, idx) => (
               <motion.div
@@ -170,17 +164,6 @@ export default function Home() {
                     </ul>
                   </div>
 
-                  {pillar.stats && (
-                    <div className="mt-6 pt-6 border-t border-gray-100">
-                      <ul className="space-y-3">
-                        {pillar.stats.map((stat, i) => (
-                          <li key={i} className="bg-primary/5 p-3 rounded-xl text-primary font-medium text-sm">
-                            {stat}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
                 </div>
               </motion.div>
             ))}
@@ -197,10 +180,18 @@ export default function Home() {
             centered
           />
           
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500 mt-12">
-            {/* Placeholder logos for partners */}
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="h-12 w-32 bg-gray-200 rounded animate-pulse" />
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 mt-12">
+            {[
+              "iFORGE", 
+              "Inclusive Haven", 
+              "HIV & AIDS Tribunal", 
+              "ACK St Augustine Madaraka", 
+              "HESED Africa", 
+              "Kenya National Library Services"
+            ].map((partner, i) => (
+              <div key={i} className="px-6 py-4 bg-white rounded-xl shadow-sm border border-gray-100 font-bold text-gray-600 hover:text-primary transition-colors">
+                {partner}
+              </div>
             ))}
           </div>
         </div>
@@ -211,8 +202,8 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -z-10" />
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader
-            title="Who We Are"
-            subtitle="Driven by the belief that every person deserves dignity, opportunity, and belonging."
+            title="Our Mission"
+            subtitle="To empower organizations and communities to embrace and practice true disability inclusion by providing professional sign language services, inclusive training, accessibility support, and strategic linkages that connect people with disabilities to meaningful opportunities."
           />
 
           <div className="grid md:grid-cols-3 gap-8">

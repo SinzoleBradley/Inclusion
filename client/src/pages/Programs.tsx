@@ -27,38 +27,28 @@ export default function Programs() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 rounded-3xl bg-primary/5 border border-primary/10">
-              <h3 className="text-xl font-bold text-primary mb-4">1. Making communication Accessible</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">Accessible Communication</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Sign language Training</li>
-                <li>• Sign language interpretation</li>
-                <li>• Making Easy to read Materials</li>
-                <li>• Translation of Text to braille</li>
-                <li>• Training on the use of Text to speech softwares</li>
+                <li>• Sign language training for individuals and organizations</li>
+                <li>• Professional sign language interpretation services</li>
+                <li>• Promoting barrier-free information access for persons with diverse disabilities</li>
               </ul>
             </div>
             <div className="p-8 rounded-3xl bg-secondary/5 border border-secondary/10">
-              <h3 className="text-xl font-bold text-secondary-foreground mb-4">2. Advocacy</h3>
+              <h3 className="text-xl font-bold text-secondary-foreground mb-4">Inclusive Systems & Environments</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Disability Inclusion and Awareness Training</li>
-                <li>• Facilities Disability assessment Audit</li>
+                <li>• Disability inclusion training (workplace, programs, events, and community)</li>
+                <li>• Accessibility audits with practical recommendations for organizations and companies</li>
+                <li>• Co-creation of inclusive policies, practices, and environments</li>
               </ul>
             </div>
             <div className="p-8 rounded-3xl bg-primary/5 border border-primary/10">
-              <h3 className="text-xl font-bold text-primary mb-4">3. Partnerships</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">Empowerment & Advocacy</h3>
               <ul className="space-y-2 text-muted-foreground mb-6">
-                <li>• Projects Co-creation and design</li>
-                <li>• Linkages</li>
+                <li>• Linkages for persons with disabilities to programs, training, and employment opportunities</li>
+                <li>• Connecting organizations with disability-focused networks and communities</li>
+                <li>• Advocacy for the rights, visibility, and meaningful participation of persons with disabilities</li>
               </ul>
-              <div className="pt-6 border-t border-primary/10 space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium">Companies Linked</span>
-                  <span className="text-2xl font-bold text-primary">15+</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium">Jobs Secured</span>
-                  <span className="text-2xl font-bold text-primary">50+</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

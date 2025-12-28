@@ -82,28 +82,32 @@ export default function Contact() {
                   <MapPin className="w-6 h-6 text-secondary shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900">Address</h4>
-                    <p className="text-muted-foreground text-sm">123 Inclusion Way, Nairobi, Kenya</p>
+                    <p className="text-muted-foreground text-sm">Nairobi, Kenya</p>
                   </div>
                 </li>
                 <li className="flex gap-4 items-center">
                   <Phone className="w-6 h-6 text-secondary shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900">Phone</h4>
-                    <p className="text-muted-foreground text-sm">+254 700 123 456</p>
+                    <p className="text-muted-foreground text-sm">+254 723036604 / +245 718015101</p>
                   </div>
                 </li>
                 <li className="flex gap-4 items-center">
                   <Mail className="w-6 h-6 text-secondary shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900">Email</h4>
-                    <p className="text-muted-foreground text-sm">hello@inclusionbridge.org</p>
+                    <p className="text-muted-foreground text-sm">handsoninclusionke@gmail.com</p>
                   </div>
                 </li>
               </ul>
               <div className="p-6 bg-primary/5 rounded-xl border border-primary/10">
-                <p className="text-sm text-primary font-medium italic">
-                  "Every voice matters. Let's work together for a more inclusive future."
-                </p>
+                <h4 className="font-bold text-gray-900 mb-2">Connect on Social Media</h4>
+                <ul className="text-sm space-y-1 text-muted-foreground">
+                  <li>Facebook: Inclusion Bridge Africa</li>
+                  <li>Instagram: Inclusion_bridge_Africa</li>
+                  <li>TikTok: Inclusion.bridge</li>
+                  <li>LinkedIn: Inclusion Bridge Africa</li>
+                </ul>
               </div>
             </div>
 

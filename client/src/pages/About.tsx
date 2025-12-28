@@ -6,28 +6,52 @@ import { Linkedin, Twitter, Mail } from "lucide-react";
 // Mock Data for Team Members
 const TEAM_MEMBERS = [
   {
-    name: "Victor Maingi",
-    role: "CEO & Founder",
-    bio: "A disability rights advocate with over 15 years of experience in policy reform and inclusive development across East Africa.",
+    name: "Victor Mbatia",
+    role: "Co-Director IBA",
+    bio: "",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "Roselyn Alaru",
-    role: "Co-founder",
-    bio: "Focuses on scaling our community outreach programs and ensuring resources reach the most remote areas effectively.",
+    name: "Roslyn Njuguna",
+    role: "Co-Director IBA",
+    bio: "",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "Grace Njoroge",
-    role: "Lead Accessibility Tech",
-    bio: "Driving our digital inclusion initiatives, ensuring that technology serves as a bridge rather than a barrier.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    name: "Rev Ignitious Malimo",
+    role: "Board Member",
+    bio: "",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "Samuel Kalu",
-    role: "Community Liaison",
-    bio: "Building trust and partnerships with local grassroots organizations to ensure our impact is sustainable.",
+    name: "Rev Edwin Masai",
+    role: "Disability Inclusion Advisor",
+    bio: "",
     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Simon Ngina",
+    role: "Sign Language Trainer",
+    bio: "",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Benson Kigotho",
+    role: "Sign Language Trainer",
+    bio: "",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Macnum Vita",
+    role: "Disability Inclusion Facilitator",
+    bio: "",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Bradley Sinzole",
+    role: "IT Specialist",
+    bio: "",
+    image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -41,7 +65,7 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
             title="Our Story & Vision" 
-            subtitle="Founded on the principle that disability is not inability, but diversity."
+            subtitle="A society where every person with a disability is fully included, empowered, and engaged in all spheres of life"
             centered={true}
           />
         </div>
@@ -51,9 +75,18 @@ export default function About() {
       <section className="py-12 bg-white border-b">
         <div className="container mx-auto px-4 md:px-6">
           <p className="text-center text-sm font-bold text-muted-foreground uppercase tracking-widest mb-8">Our Partners</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="h-8 w-24 bg-gray-200 rounded animate-pulse" />
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            {[
+              "iFORGE", 
+              "Inclusive Haven", 
+              "HIV & AIDS Tribunal", 
+              "ACK St Augustine Madaraka", 
+              "HESED Africa", 
+              "Kenya National Library Services"
+            ].map((partner, i) => (
+              <div key={i} className="px-6 py-4 bg-gray-50 rounded-xl border border-gray-100 font-bold text-gray-600 hover:text-primary transition-colors">
+                {partner}
+              </div>
             ))}
           </div>
         </div>
@@ -64,15 +97,14 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="prose prose-lg text-muted-foreground">
-              <h3 className="text-2xl font-bold text-primary font-display mb-4">A Bridge to Opportunity</h3>
+              <h3 className="text-2xl font-bold text-primary font-display mb-4">Our Vision</h3>
               <p>
-                Inclusion Bridge Africa was established to close the gap between potential and opportunity for persons with disabilities across the continent. We recognized that while talent is universal, access is not.
+                A society where every person with a disability is fully included, empowered, and engaged in all spheres of life.
               </p>
+              
+              <h3 className="text-2xl font-bold text-primary font-display mb-4 mt-8">Our Mission</h3>
               <p>
-                By partnering with local communities, governments, and international organizations, we create sustainable pathways for social and economic inclusion. Our approach is holistic—addressing not just physical barriers, but attitudinal and systemic ones as well.
-              </p>
-              <p>
-                We envision an Africa where every individual, regardless of ability, can learn, work, and lead with dignity.
+                To empower organizations and communities to embrace and practice true disability inclusion by providing professional sign language services, inclusive training, accessibility support, and strategic linkages that connect people with disabilities to meaningful opportunities.
               </p>
             </div>
             <div className="relative">
@@ -98,14 +130,14 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader title="Our Core Values" centered={true} />
           
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {[
-              { title: "Community-Led", text: "We believe solutions must be rooted in the lived experiences of the people we serve." },
-              { title: "Sustainable Impact", text: "We focus on long-term capacity building rather than short-term aid." },
-              { title: "Radical Inclusion", text: "We go beyond accommodation to create environments of true belonging." },
-              { title: "Integrity", text: "We operate with transparency, accountability, and respect in all we do." },
-              { title: "Innovation", text: "We embrace new technologies and methods to break down old barriers." },
-              { title: "Partnership", text: "We believe we are stronger together, collaborating across sectors for change." }
+              { title: "Rights-Based Inclusion", text: "We are guided by the UNCRPD and uphold disability inclusion as a human rights issue, ensuring persons with disabilities are central to decisions that affect their lives." },
+              { title: "Accessibility & Universal Design", text: "We champion accessible communication, environments, and systems that enable full participation, in line with SDG 10 (Reduced Inequalities)." },
+              { title: "Equity & Empowerment", text: "We recognize diverse needs and promote tailored support that empowers persons with disabilities to participate independently and meaningfully." },
+              { title: "Participation & Co-Creation", text: "We believe in “nothing about us without us.” We work collaboratively with persons with disabilities to design solutions that reflect lived experience." },
+              { title: "Partnerships for Impact", text: "We build strong, inclusive partnerships across sectors to expand opportunities, strengthen systems, and contribute to sustainable development (SDG 17)." },
+              { title: "Integrity & Accountability", text: "We act with transparency, professionalism, and responsibility, ensuring our work delivers measurable and lasting impact." }
             ].map((value, i) => (
               <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-border hover:shadow-md transition-all">
                 <h4 className="text-xl font-bold text-primary mb-3 font-display">{value.title}</h4>
@@ -123,7 +155,7 @@ export default function About() {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <SectionHeader 
-            title="Meet the Leadership" 
+            title="The Team" 
             subtitle="The passionate individuals driving our mission forward."
             centered={true}
           />
@@ -166,6 +198,15 @@ export default function About() {
               </div>
             ))}
           </div>
+
+           <div className="mt-16 text-center">
+            <h4 className="text-xl font-bold text-primary mb-4">Also supporting our mission:</h4>
+            <div className="flex flex-wrap justify-center gap-4">
+               <span className="bg-primary/5 px-6 py-3 rounded-full text-primary font-semibold">Sign Language Interpreters</span>
+               <span className="bg-primary/5 px-6 py-3 rounded-full text-primary font-semibold">Disability Advisory Board</span>
+            </div>
+           </div>
+
         </div>
       </section>
 

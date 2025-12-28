@@ -56,15 +56,15 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-1" />
-                <span className="text-primary-foreground/80">123 Inclusion Way, Nairobi, Kenya</span>
+                <span className="text-primary-foreground/80">Nairobi, Kenya</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-secondary shrink-0" />
-                <span className="text-primary-foreground/80">+254 700 123 456</span>
+                <span className="text-primary-foreground/80">+254 723036604 / +245 718015101</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-secondary shrink-0" />
-                <span className="text-primary-foreground/80">hello@inclusionbridge.org</span>
+                <Mail className="w-5 h-6 text-secondary shrink-0" />
+                <span className="text-primary-foreground/80 text-sm break-all">handsoninclusionke@gmail.com</span>
               </li>
             </ul>
           </div>

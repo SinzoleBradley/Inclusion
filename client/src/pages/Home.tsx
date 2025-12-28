@@ -59,7 +59,7 @@ export default function Home() {
               HANDS ON INCLUSION
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-display text-balance">
-              INCLUSION BRIDGE AFRICA
+              Inclusion Bridge Africa
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-lg leading-relaxed">
               A society where every person with a disability is fully included, empowered, and engaged in all spheres of life

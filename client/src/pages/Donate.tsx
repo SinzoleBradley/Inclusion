@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -8,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useContactSubmit } from "@/hooks/use-content";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle2, Heart } from "lucide-react";
 
@@ -22,7 +22,7 @@ const donateFormSchema = z.object({
 type DonateFormValues = z.infer<typeof donateFormSchema>;
 
 export default function Donate() {
-  const { mutate, isPending } = useContactSubmit();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<DonateFormValues>({
@@ -35,32 +35,35 @@ export default function Donate() {
   });
 
   function onSubmit(data: DonateFormValues) {
+    setIsSubmitting(true);
     // In a real app, this would integrate with Stripe/PayPal
     // Here we treat it as a pledge/contact inquiry for donation
-    mutate(
-      { 
-        name: data.name, 
-        email: data.email, 
-        subject: `Donation Pledge: ${data.amount || 'General'}`,
-        message: data.message 
-      },
-      {
-        onSuccess: () => {
-          toast({
-            title: "Thank you for your support!",
-            description: "We will contact you shortly with donation details.",
-          });
-          form.reset();
-        },
-        onError: (err) => {
-          toast({
-            variant: "destructive",
-            title: "Something went wrong",
-            description: err.message,
-          });
-        }
-      }
-    );
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        "form-name": "donation-pledge",
+        name: data.name,
+        email: data.email,
+        amount: data.amount || "",
+        message: data.message,
+      }).toString(),
+    })
+      .then(() => {
+        toast({
+          title: "Thank you for your support!",
+          description: "We will contact you shortly with donation details.",
+        });
+        form.reset();
+      })
+      .catch((err) => {
+        toast({
+          variant: "destructive",
+          title: "Something went wrong",
+          description: "Please try again later.",
+        });
+      })
+      .finally(() => setIsSubmitting(false));
   }
 
   return (
@@ -110,7 +113,8 @@ export default function Donate() {
             <div className="bg-white p-8 rounded-3xl shadow-xl border border-border">
               <h3 className="text-2xl font-bold font-display mb-6">Make a Pledge</h3>
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-netlify="true" name="donation-pledge">
+                  <input type="hidden" name="form-name" value="donation-pledge" />
                   <FormField
                     control={form.control}
                     name="name"
@@ -166,9 +170,9 @@ export default function Donate() {
                   <Button 
                     type="submit" 
                     className="w-full h-14 rounded-xl text-lg font-bold bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-lg shadow-secondary/20"
-                    disabled={isPending}
+                    disabled={isSubmitting}
                   >
-                    {isPending ? "Submitting..." : (
+                    {isSubmitting ? "Submitting..." : (
                       <>
                         <Heart className="w-5 h-5 mr-2 fill-current" />
                         Pledge Support

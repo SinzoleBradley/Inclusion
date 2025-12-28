@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -8,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useContactSubmit } from "@/hooks/use-content";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
 
@@ -22,7 +22,7 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
-  const { mutate, isPending } = useContactSubmit();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<ContactFormValues>({
@@ -36,24 +36,30 @@ export default function Contact() {
   });
 
   function onSubmit(data: ContactFormValues) {
-    mutate(data,
-      {
-        onSuccess: () => {
-          toast({
-            title: "Message Sent!",
-            description: "We will get back to you shortly.",
-          });
-          form.reset();
-        },
-        onError: (err) => {
-          toast({
-            variant: "destructive",
-            title: "Something went wrong",
-            description: err.message,
-          });
-        }
-      }
-    );
+    setIsSubmitting(true);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        "form-name": "contact",
+        ...data,
+      }).toString(),
+    })
+      .then(() => {
+        toast({
+          title: "Message Sent!",
+          description: "We will get back to you shortly.",
+        });
+        form.reset();
+      })
+      .catch((err) => {
+        toast({
+          variant: "destructive",
+          title: "Something went wrong",
+          description: "Please try again later.",
+        });
+      })
+      .finally(() => setIsSubmitting(false));
   }
 
   return (
@@ -96,7 +102,7 @@ export default function Contact() {
                   <Mail className="w-6 h-6 text-secondary shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900">Email</h4>
-                    <p className="text-muted-foreground text-sm">handsoninclusionke@gmail.com</p>
+                    <p className="text-muted-foreground text-sm">hello@inclusivebridgeafrica.org</p>
                   </div>
                 </li>
               </ul>
@@ -115,7 +121,8 @@ export default function Contact() {
             <div className="bg-white p-8 rounded-3xl shadow-xl border border-border">
               <h3 className="text-2xl font-bold font-display mb-6">Send us a Message</h3>
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-netlify="true" name="contact">
+                  <input type="hidden" name="form-name" value="contact" />
                   <FormField
                     control={form.control}
                     name="name"
@@ -171,9 +178,9 @@ export default function Contact() {
                   <Button 
                     type="submit" 
                     className="w-full h-14 rounded-xl text-lg font-bold bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-lg shadow-secondary/20"
-                    disabled={isPending}
+                    disabled={isSubmitting}
                   >
-                    {isPending ? "Sending..." : (
+                    {isSubmitting ? "Sending..." : (
                       <>
                         <Mail className="w-5 h-5 mr-2 fill-current" />
                         Send Message

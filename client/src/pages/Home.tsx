@@ -8,6 +8,14 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { ProgramCard } from "@/components/ProgramCard";
 import { usePrograms, useStories } from "@/hooks/use-content";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import heroVideo from "@assets/generated_videos/inclusive_community_in_africa_video.mp4";
 import { PILLARS } from "@/lib/data";
 
@@ -110,26 +118,75 @@ export default function Home() {
 
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
             {PILLARS.map((pillar, idx) => (
-              <Link key={idx} href={`/programs#${pillar.id}`}>
-                <motion.div
-                  whileHover={{ y: -5 }}
-                  className="bg-white p-10 rounded-3xl shadow-lg shadow-gray-100 border border-gray-100 hover:border-primary/20 transition-all flex flex-col items-center text-center h-full cursor-pointer group"
-                >
-                  <div className="w-24 h-24 bg-primary/5 rounded-3xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                    <pillar.icon className="w-12 h-12" />
+              <Dialog key={idx}>
+                <DialogTrigger asChild>
+                  <motion.div
+                    whileHover={{ y: -5 }}
+                    className="bg-white p-10 rounded-3xl shadow-lg shadow-gray-100 border border-gray-100 hover:border-primary/20 transition-all flex flex-col items-center text-center h-full cursor-pointer group"
+                  >
+                    <div className="w-24 h-24 bg-primary/5 rounded-3xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                      <pillar.icon className="w-12 h-12" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900 font-display">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-8">
+                      {pillar.description}
+                    </p>
+
+                    <div className="mt-auto text-primary font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                      Learn More <ArrowRight className="w-4 h-4" />
+                    </div>
+                  </motion.div>
+                </DialogTrigger>
+                <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl">
+                  <DialogHeader>
+                    <DialogTitle className="flex items-center gap-4 text-2xl font-display text-gray-900">
+                      <div className="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center text-primary shrink-0">
+                        <pillar.icon className="w-6 h-6" />
+                      </div>
+                      {pillar.title}
+                    </DialogTitle>
+                    <DialogDescription className="text-base pt-2">
+                      {pillar.description}
+                    </DialogDescription>
+                  </DialogHeader>
+
+                  <div className="mt-6">
+                    <h4 className="text-sm font-bold text-secondary uppercase tracking-wider mb-4">
+                      Activities & Services
+                    </h4>
+                    <ul className="space-y-4">
+                      {pillar.activities.map((activity, i) => (
+                        <li
+                          key={i}
+                          className="flex flex-col gap-3 pb-3 border-b border-gray-50 last:border-0 last:pb-0"
+                        >
+                          <div className="flex items-start gap-3">
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                            <span className="text-base text-gray-700 leading-relaxed">
+                              {activity.text}
+                            </span>
+                          </div>
+                          {activity.requestQuote && (
+                            <div className="pl-8">
+                              <Link href={`/contact?subject=Quote Request: ${activity.text}`}>
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  className="h-8 text-xs font-semibold border-primary/20 hover:border-primary hover:bg-primary/5 text-primary rounded-full"
+                                >
+                                  Request Quote
+                                </Button>
+                              </Link>
+                            </div>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900 font-display">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-8">
-                    {pillar.description}
-                  </p>
-                  
-                  <div className="mt-auto text-primary font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </div>
-                </motion.div>
-              </Link>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>

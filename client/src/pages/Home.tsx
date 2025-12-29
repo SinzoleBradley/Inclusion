@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/dialog";
 import heroVideo from "@assets/generated_videos/inclusive_community_in_africa_video.mp4";
 import { PILLARS } from "@/lib/data";
+import { PartnersCarousel } from "@/components/PartnersCarousel";
 
 export default function Home() {
   const { data: programs, isLoading: programsLoading } = usePrograms();
@@ -193,29 +194,16 @@ export default function Home() {
       </section>
 
       {/* OUR PARTNERS SECTION */}
-      <section className="py-20 bg-gray-50/30">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="py-20 bg-gray-50/30 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6 mb-12">
           <SectionHeader
             title="Our Partners"
             subtitle="Working together with leading organizations to scale our impact."
             centered
           />
-          
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 mt-12">
-            {[
-              "iFORGE", 
-              "Inclusive Haven", 
-              "HIV & AIDS Tribunal", 
-              "ACK St Augustine Madaraka", 
-              "HESED Africa", 
-              "Kenya National Library Services"
-            ].map((partner, i) => (
-              <div key={i} className="px-6 py-4 bg-white rounded-xl shadow-sm border border-gray-100 font-bold text-gray-600 hover:text-primary transition-colors">
-                {partner}
-              </div>
-            ))}
-          </div>
         </div>
+        
+        <PartnersCarousel />
       </section>
 
       {/* MISSION / WHO WE ARE */}

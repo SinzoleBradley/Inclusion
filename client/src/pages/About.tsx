@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Linkedin, Twitter, Mail } from "lucide-react";
+import { PARTNERS } from "@/lib/data";
 
 // Mock Data for Team Members
 const TEAM_MEMBERS = [
@@ -68,27 +69,6 @@ export default function About() {
           />
         </div>
       </div>
-
-      {/* Our Partners Section */}
-      <section className="py-12 bg-white border-b">
-        <div className="container mx-auto px-4 md:px-6">
-          <p className="text-center text-sm font-bold text-muted-foreground uppercase tracking-widest mb-8">Our Partners</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            {[
-              "iFORGE", 
-              "Inclusive Haven", 
-              "HIV & AIDS Tribunal", 
-              "ACK St Augustine Madaraka", 
-              "HESED Africa", 
-              "Kenya National Library Services"
-            ].map((partner, i) => (
-              <div key={i} className="px-6 py-4 bg-gray-50 rounded-xl border border-gray-100 font-bold text-gray-600 hover:text-primary transition-colors">
-                {partner}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Story Section */}
       <section className="py-20">
@@ -192,7 +172,25 @@ export default function About() {
                <span className="bg-primary/5 px-6 py-3 rounded-full text-primary font-semibold">Disability Advisory Board</span>
             </div>
            </div>
+        </div>
+      </section>
 
+      {/* Partners Grid Section */}
+      <section className="py-20 bg-gray-50/50 border-t">
+        <div className="container mx-auto px-4 md:px-6">
+          <SectionHeader title="Our Partners" subtitle="Collaborating for impact." centered={true} />
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 mt-12 items-center">
+             {PARTNERS.map((partner, i) => (
+                <div key={i} className="flex items-center justify-center p-6 bg-white rounded-xl shadow-sm border border-gray-100 h-32 hover:shadow-md transition-all hover:-translate-y-1">
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name} 
+                    className="max-h-16 w-full object-contain"
+                  />
+                </div>
+             ))}
+          </div>
         </div>
       </section>
 

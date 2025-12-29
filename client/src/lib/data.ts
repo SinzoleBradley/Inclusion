@@ -62,3 +62,11 @@ export const PILLARS = [
     ]
   }
 ];
+
+export const PARTNERS = [
+  { name: "iFORGE", logo: "/partners/iforge.png" },
+  { name: "Inclusive Haven", logo: "/partners/inclusive.jpg" },
+  { name: "ACK St Augustine Madaraka", logo: "/partners/ACK.png" },
+  { name: "HESED Africa", logo: "/partners/hessed.jpg" },
+  { name: "Kenya National Library Services", logo: "/partners/knls.png" },
+];

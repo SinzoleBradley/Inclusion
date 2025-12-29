@@ -5,7 +5,7 @@ import logoUrl from "@assets/logo.png";
 
 export function Footer() {
   const socialLinks = [
-    { Icon: FaFacebook, href: "https://www.facebook.com/InclusionBridgeAfrica", label: "Facebook" },
+    { Icon: FaFacebook, href: "https://www.facebook.com/profile.php?id=61577245546691", label: "Facebook" },
     { Icon: FaInstagram, href: "https://www.instagram.com/inclusion_bridge_africa?igsh=M2ZmM3c5dXRxd3My", label: "Instagram" },
     { Icon: FaLinkedin, href: "https://www.linkedin.com/company/inclusion-bridge-africa", label: "LinkedIn" },
     { Icon: FaTiktok, href: "https://www.tiktok.com/@Inclusion.bridge", label: "TikTok" }

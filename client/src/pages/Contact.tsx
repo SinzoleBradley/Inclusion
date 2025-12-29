@@ -98,7 +98,7 @@ export default function Contact() {
                   <Mail className="w-6 h-6 text-secondary shrink-0" />
                   <div>
                     <h4 className="font-bold text-gray-900">Email</h4>
-                    <p className="text-muted-foreground text-sm">hello@inclusivebridgeafrica.org</p>
+                    <p className="text-muted-foreground text-sm">hello@inclusionbridgeafrica.org</p>
                   </div>
                 </li>
               </ul>

@@ -125,7 +125,7 @@ export default function Contact() {
                   </li>
                   <li>
                     <a href="https://www.tiktok.com/@Inclusion.bridge" target="_blank" rel="noopener noreferrer" className="hover:text-secondary hover:underline transition-colors">
-                      TikTok: Inclusion.bridge
+                      TikTok: inclusion.bridge
                     </a>
                   </li>
                   <li>

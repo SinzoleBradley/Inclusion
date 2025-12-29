@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -32,6 +32,14 @@ export default function Contact() {
       message: "",
     },
   });
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get("subject");
+    if (subject) {
+      form.setValue("subject", subject);
+    }
+  }, [form]);
 
   function onSubmit(data: ContactFormValues) {
     setIsSubmitting(true);

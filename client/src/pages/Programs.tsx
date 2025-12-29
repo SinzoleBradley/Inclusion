@@ -1,17 +1,38 @@
+import { useEffect } from "react";
+import { useLocation, Link } from "wouter";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ProgramCard } from "@/components/ProgramCard";
 import { usePrograms } from "@/hooks/use-content";
-import { Loader2 } from "lucide-react";
+import { Loader2, CheckCircle2 } from "lucide-react";
+import { PILLARS } from "@/lib/data";
+import { Button } from "@/components/ui/button";
 
 export default function Programs() {
   const { data: programs, isLoading } = usePrograms();
+  const [location] = useLocation();
+
+  useEffect(() => {
+    // Handle hash navigation
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
+          // Add a temporary highlight effect
+          element.classList.add("ring-2", "ring-primary", "ring-offset-4");
+          setTimeout(() => element.classList.remove("ring-2", "ring-primary", "ring-offset-4"), 2000);
+        }
+      }, 100);
+    }
+  }, [location]);
 
   return (
     <div className="min-h-screen bg-background">
       <div className="pt-32 pb-20 bg-primary/5">
         <div className="container mx-auto px-4 md:px-6">
-          <SectionHeader 
-            title="Our Programs & Pillars" 
+          <SectionHeader
+            title="Our Programs"
             subtitle="Comprehensive initiatives designed to empower, educate, and advocate through our three core pillars."
             centered={true}
           />
@@ -21,31 +42,46 @@ export default function Programs() {
       {/* Our Pillars Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-3xl bg-primary/5 border border-primary/10">
-              <h3 className="text-xl font-bold text-primary mb-4">Accessible Communication</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Sign language training for individuals and organizations</li>
-                <li>• Professional sign language interpretation services</li>
-                <li>• Promoting barrier-free information access for persons with diverse disabilities</li>
-              </ul>
-            </div>
-            <div className="p-8 rounded-3xl bg-secondary/5 border border-secondary/10">
-              <h3 className="text-xl font-bold text-secondary-foreground mb-4">Inclusive Systems & Environments</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Disability inclusion training (workplace, programs, events, and community)</li>
-                <li>• Accessibility audits with practical recommendations for organizations and companies</li>
-                <li>• Co-creation of inclusive policies, practices, and environments</li>
-              </ul>
-            </div>
-            <div className="p-8 rounded-3xl bg-primary/5 border border-primary/10">
-              <h3 className="text-xl font-bold text-primary mb-4">Empowerment & Advocacy</h3>
-              <ul className="space-y-2 text-muted-foreground mb-6">
-                <li>• Linkages for persons with disabilities to programs, training, and employment opportunities</li>
-                <li>• Connecting organizations with disability-focused networks and communities</li>
-                <li>• Advocacy for the rights, visibility, and meaningful participation of persons with disabilities</li>
-              </ul>
-            </div>
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+            {PILLARS.map((pillar) => (
+              <div
+                key={pillar.id}
+                id={pillar.id}
+                className="p-8 rounded-3xl bg-white border border-gray-100 shadow-lg transition-all duration-300 hover:shadow-xl scroll-mt-32 flex flex-col"
+              >
+                <div className="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 text-primary">
+                  <pillar.icon className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {pillar.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-6">
+                    {pillar.description}
+                </p>
+
+                <div className="space-y-4 flex-grow">
+                    <ul className="space-y-4">
+                        {pillar.activities.map((activity, i) => (
+                        <li key={i} className="flex flex-col gap-3 pb-3 border-b border-gray-50 last:border-0 last:pb-0">
+                            <div className="flex items-start gap-2.5">
+                                <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                                <span className="text-sm text-gray-600 font-medium leading-relaxed">{activity.text}</span>
+                            </div>
+                            {activity.requestQuote && (
+                                <div className="pl-7">
+                                    <Link href={`/contact?subject=Quote Request: ${activity.text}`}>
+                                        <Button variant="outline" size="sm" className="h-8 text-xs font-semibold border-primary/20 hover:border-primary hover:bg-primary/5 text-primary">
+                                            Request Quote
+                                        </Button>
+                                    </Link>
+                                </div>
+                            )}
+                        </li>
+                        ))}
+                    </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

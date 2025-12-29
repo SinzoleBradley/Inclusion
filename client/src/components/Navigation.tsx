@@ -9,7 +9,7 @@ import logoUrl from "@assets/logo.png";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/programs", label: "Programs & Pillars" },
+  { href: "/programs", label: "Programs" },
   { href: "/impact", label: "Impact" },
 ];
 

@@ -9,6 +9,7 @@ import { ProgramCard } from "@/components/ProgramCard";
 import { usePrograms, useStories } from "@/hooks/use-content";
 import { Button } from "@/components/ui/button";
 import heroVideo from "@assets/generated_videos/inclusive_community_in_africa_video.mp4";
+import { PILLARS } from "@/lib/data";
 
 export default function Home() {
   const { data: programs, isLoading: programsLoading } = usePrograms();
@@ -108,62 +109,23 @@ export default function Home() {
           />
 
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: MessageSquare,
-                title: "Accessible Communication",
-                activities: [
-                  "Sign language training for individuals and organizations",
-                  "Professional sign language interpretation services",
-                  "Promoting barrier-free information access for persons with diverse disabilities",
-                ],
-              },
-              {
-                icon: Award,
-                title: "Inclusive Systems & Environments",
-                activities: [
-                  "Disability inclusion training (workplace, programs, events, and community)",
-                  "Accessibility audits with practical recommendations for organizations and companies",
-                  "Co-creation of inclusive policies, practices, and environments",
-                ],
-              },
-              {
-                icon: Handshake,
-                title: "Empowerment & Advocacy",
-                activities: [
-                  "Linkages for persons with disabilities to programs, training, and employment opportunities",
-                  "Connecting organizations with disability-focused networks and communities",
-                  "Advocacy for the rights, visibility, and meaningful participation of persons with disabilities",
-                ],
-              },
-            ].map((pillar, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ y: -5 }}
-                className="bg-white p-8 rounded-3xl shadow-lg shadow-gray-100 border border-gray-100 hover:border-primary/20 transition-all flex flex-col h-full"
-              >
-                <div className="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 text-primary">
-                  <pillar.icon className="w-7 h-7" />
-                </div>
-                <h3 className="text-2xl font-bold mb-6 text-gray-900 font-display">
-                  {pillar.title}
-                </h3>
-                
-                <div className="space-y-4 flex-grow">
-                  <div>
-                    <h4 className="text-sm font-bold text-secondary uppercase tracking-wider mb-3">Activities</h4>
-                    <ul className="space-y-2">
-                      {pillar.activities.map((activity, i) => (
-                        <li key={i} className="flex items-start gap-2 text-muted-foreground">
-                          <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                          <span>{activity}</span>
-                        </li>
-                      ))}
-                    </ul>
+            {PILLARS.map((pillar, idx) => (
+              <Link key={idx} href={`/programs#${pillar.id}`}>
+                <motion.div
+                  whileHover={{ y: -5 }}
+                  className="bg-white p-10 rounded-3xl shadow-lg shadow-gray-100 border border-gray-100 hover:border-primary/20 transition-all flex flex-col items-center text-center h-full cursor-pointer group"
+                >
+                  <div className="w-24 h-24 bg-primary/5 rounded-3xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                    <pillar.icon className="w-12 h-12" />
                   </div>
-
-                </div>
-              </motion.div>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900 font-display">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {pillar.description}
+                  </p>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>

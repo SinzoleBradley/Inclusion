@@ -1,8 +1,16 @@
 import { Link } from "wouter";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import logoUrl from "@assets/logo.png";
 
 export function Footer() {
+  const socialLinks = [
+    { Icon: FaFacebook, href: "https://www.facebook.com/InclusionBridgeAfrica", label: "Facebook" },
+    { Icon: FaInstagram, href: "https://www.instagram.com/inclusion_bridge_africa?igsh=M2ZmM3c5dXRxd3My", label: "Instagram" },
+    { Icon: FaLinkedin, href: "https://www.linkedin.com/company/inclusion-bridge-africa", label: "LinkedIn" },
+    { Icon: FaTiktok, href: "https://www.tiktok.com/@Inclusion.bridge", label: "TikTok" }
+  ];
+
   return (
     <footer className="bg-primary text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
@@ -21,8 +29,15 @@ export function Footer() {
               Empowering persons with disabilities through advocacy, training, and community. Building a world where everyone belongs.
             </p>
             <div className="flex gap-4 pt-2">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all duration-300">
+              {socialLinks.map(({ Icon, href, label }) => (
+                <a 
+                  key={label} 
+                  href={href} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label={label}
+                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
+                >
                   <Icon className="w-5 h-5" />
                 </a>
               ))}

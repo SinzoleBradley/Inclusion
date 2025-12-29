@@ -112,11 +112,27 @@ export default function Contact() {
               </ul>
               <div className="p-6 bg-primary/5 rounded-xl border border-primary/10">
                 <h4 className="font-bold text-gray-900 mb-2">Connect on Social Media</h4>
-                <ul className="text-sm space-y-1 text-muted-foreground">
-                  <li>Facebook: Inclusion Bridge Africa</li>
-                  <li>Instagram: Inclusion_bridge_Africa</li>
-                  <li>TikTok: Inclusion.bridge</li>
-                  <li>LinkedIn: Inclusion Bridge Africa</li>
+                <ul className="text-sm space-y-2 text-muted-foreground">
+                  <li>
+                    <a href="https://www.facebook.com/profile.php?id=61577245546691" target="_blank" rel="noopener noreferrer" className="hover:text-secondary hover:underline transition-colors">
+                      Facebook: Inclusion Bridge Africa
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/Inclusion_bridge_Africa" target="_blank" rel="noopener noreferrer" className="hover:text-secondary hover:underline transition-colors">
+                      Instagram: Inclusion_bridge_Africa
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.tiktok.com/@Inclusion.bridge" target="_blank" rel="noopener noreferrer" className="hover:text-secondary hover:underline transition-colors">
+                      TikTok: Inclusion.bridge
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/company/inclusion-bridge-africa" target="_blank" rel="noopener noreferrer" className="hover:text-secondary hover:underline transition-colors">
+                      LinkedIn: Inclusion Bridge Africa
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

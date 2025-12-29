@@ -70,3 +70,55 @@ export const PARTNERS = [
   { name: "HESED Africa", logo: "/partners/hessed.jpg" },
   { name: "Kenya National Library Services", logo: "/partners/knls.png" },
 ];
+
+export const EVENTS = [  {
+   id: 1,
+   title: "Sign Language Class for Beginners",
+   date: "January 15, 2026",
+   time: "10:00 AM - 2:00 PM",
+   location: "TBC",
+   description: "An introductory course to Kenyan Sign Language (KSL) for individuals interested in learning basic communication skills.",
+   category: "Training",
+   image: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfD_example_form_id/viewform"
+  },
+  //{
+    //id: 2,
+    //title: "Digital Accessibility Masterclass",
+    //date: "June 10, 2024",
+    //time: "9:00 AM - 4:00 PM",
+    //location: "Online (Zoom)",
+    //description: "Learn how to make your digital content and websites accessible to everyone, covering WCAG 2.1 guidelines.",
+    //category: "Training",
+    //image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    //registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfD_example_form_id/viewform"
+  //},
+  //{
+    //id: 3,
+    //title: "Community Charity Gala",
+    //date: "July 20, 2024",
+    //time: "6:00 PM - 10:00 PM",
+    //location: "Sarit Centre, Nairobi",
+    //description: "Join us for an evening of networking, celebration, and fundraising to support our ongoing programs.",
+    //category: "Event",
+    //image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    //registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfD_example_form_id/viewform"
+  //}
+];
+
+export const ANNOUNCEMENTS = [
+  {
+    id: 1,
+    title: "New Partnership Announcement",
+    date: "April 5, 2024",
+    content: "We are thrilled to announce a new partnership with TechForAll to expand our digital literacy programs to rural areas.",
+    type: "News"
+  },
+  {
+    id: 2,
+    title: "Call for Volunteers",
+    date: "March 28, 2024",
+    content: "We are seeking passionate volunteers to assist with our upcoming youth mentorship program. Sign up today to make a difference!",
+    type: "Opportunity"
+  }
+];

@@ -19,6 +19,7 @@ import {
 import heroVideo from "@assets/generated_videos/inclusive_community_in_africa_video.mp4";
 import { PILLARS } from "@/lib/data";
 import { PartnersCarousel } from "@/components/PartnersCarousel";
+import { EventsSlider } from "@/components/EventsSlider";
 
 export default function Home() {
   const { data: programs, isLoading: programsLoading } = usePrograms();
@@ -192,6 +193,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* UPCOMING EVENTS SLIDER */}
+      <EventsSlider />
 
       {/* OUR PARTNERS SECTION */}
       <section className="py-20 bg-gray-50/30 overflow-hidden">

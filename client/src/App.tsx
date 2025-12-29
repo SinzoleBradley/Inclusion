@@ -9,6 +9,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Programs from "@/pages/Programs";
+import Events from "@/pages/Events";
 import Impact from "@/pages/Impact";
 import Donate from "@/pages/Donate";
 import Accessibility from "@/pages/Accessibility";
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/programs" component={Programs} />
+      <Route path="/events" component={Events} />
       <Route path="/impact" component={Impact} />
       {/* <Route path="/donate" component={Donate} /> */}
       <Route path="/contact" component={Contact} />

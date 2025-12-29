@@ -121,9 +121,13 @@ export default function Home() {
                   <h3 className="text-2xl font-bold mb-4 text-gray-900 font-display">
                     {pillar.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed mb-8">
                     {pillar.description}
                   </p>
+                  
+                  <div className="mt-auto text-primary font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                    Learn More <ArrowRight className="w-4 h-4" />
+                  </div>
                 </motion.div>
               </Link>
             ))}

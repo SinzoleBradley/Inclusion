@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -111,29 +112,21 @@ export default function Contact() {
                 </li>
               </ul>
               <div className="p-6 bg-primary/5 rounded-xl border border-primary/10">
-                <h4 className="font-bold text-gray-900 mb-2">Connect on Social Media</h4>
-                <ul className="text-sm space-y-2 text-muted-foreground">
-                  <li>
-                    <a href="https://www.facebook.com/profile.php?id=61577245546691" target="_blank" rel="noopener noreferrer" className="hover:text-secondary hover:underline transition-colors">
-                      Facebook: Inclusion Bridge Africa
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/Inclusion_bridge_Africa" target="_blank" rel="noopener noreferrer" className="hover:text-secondary hover:underline transition-colors">
-                      Instagram: Inclusion_bridge_Africa
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.tiktok.com/@Inclusion.bridge" target="_blank" rel="noopener noreferrer" className="hover:text-secondary hover:underline transition-colors">
-                      TikTok: inclusion.bridge
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com/company/inclusion-bridge-africa" target="_blank" rel="noopener noreferrer" className="hover:text-secondary hover:underline transition-colors">
-                      LinkedIn: Inclusion Bridge Africa
-                    </a>
-                  </li>
-                </ul>
+                <h4 className="font-bold text-gray-900 mb-4">Connect on Social Media</h4>
+                <div className="flex gap-4">
+                  <a href="https://www.facebook.com/profile.php?id=61577245546691" target="_blank" rel="noopener noreferrer" className="bg-white p-3 rounded-full text-primary hover:text-white hover:bg-primary transition-all shadow-sm border border-border" aria-label="Facebook">
+                    <FaFacebook className="w-5 h-5" />
+                  </a>
+                  <a href="https://www.instagram.com/Inclusion_bridge_Africa" target="_blank" rel="noopener noreferrer" className="bg-white p-3 rounded-full text-primary hover:text-white hover:bg-primary transition-all shadow-sm border border-border" aria-label="Instagram">
+                    <FaInstagram className="w-5 h-5" />
+                  </a>
+                  <a href="https://www.tiktok.com/@Inclusion.bridge" target="_blank" rel="noopener noreferrer" className="bg-white p-3 rounded-full text-primary hover:text-white hover:bg-primary transition-all shadow-sm border border-border" aria-label="TikTok">
+                    <FaTiktok className="w-5 h-5" />
+                  </a>
+                  <a href="https://www.linkedin.com/company/inclusion-bridge-africa" target="_blank" rel="noopener noreferrer" className="bg-white p-3 rounded-full text-primary hover:text-white hover:bg-primary transition-all shadow-sm border border-border" aria-label="LinkedIn">
+                    <FaLinkedin className="w-5 h-5" />
+                  </a>
+                </div>
               </div>
             </div>
 

@@ -21,13 +21,13 @@ const TEAM_MEMBERS = [
     name: "Rev Ignitious Malimo",
     role: "Board Member",
     bio: "",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Rev Edwin Masai",
     role: "Disability Inclusion Advisor",
     bio: "",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/team/rev.jpg",
   },
   {
     name: "Simon Ngina",
@@ -51,7 +51,7 @@ const TEAM_MEMBERS = [
     name: "Bradley Sinzole",
     role: "IT Specialist",
     bio: "",
-    image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/team/brad.jpg",
   },
 ];
 
@@ -166,24 +166,12 @@ export default function About() {
               >
                 {/* Image Card */}
                 <div className="w-full aspect-[3/4] overflow-hidden rounded-2xl mb-6 relative shadow-lg bg-gray-100">
-                  {/* Overlay for social icons on hover (Desktop) */}
-                  <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center gap-4">
-                    <button className="p-2 bg-white rounded-full text-primary hover:text-secondary transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300">
-                      <Linkedin size={20} />
-                    </button>
-                    <button className="p-2 bg-white rounded-full text-primary hover:text-secondary transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75">
-                      <Twitter size={20} />
-                    </button>
-                    <button className="p-2 bg-white rounded-full text-primary hover:text-secondary transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 delay-100">
-                      <Mail size={20} />
-                    </button>
-                  </div>
                   
                   {/* The Image */}
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:scale-110 filter grayscale group-hover:grayscale-0"
+                    className="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:scale-110"
                   />
                 </div>
 

@@ -62,7 +62,7 @@ export default function About() {
       <div className="pt-32 pb-20 bg-primary/5">
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
-            title="Our Story & Vision" 
+            title="Inclusion Bridge Africa" 
             subtitle="A society where every person with a disability is fully included, empowered, and engaged in all spheres of life"
             centered={true}
           />

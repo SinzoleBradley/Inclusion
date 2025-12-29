@@ -292,7 +292,7 @@ export default function Home() {
 
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display">
-            Be the Bridge to Inclusion
+            Become the Bridge to Inclusion
           </h2>
           <p className="text-xl text-white/80 mb-10 leading-relaxed">
             Join us in empowering abilities and bridging communities across Africa. Your involvement helps us create a more accessible and equitable world for persons with disabilities.

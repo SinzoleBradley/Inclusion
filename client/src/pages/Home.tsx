@@ -115,7 +115,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader
             title="Our Pillars"
-            subtitle="The fundamental areas of our work to create a truly inclusive society."
+            subtitle="To achieve our mission, our work is structured around three core pillars that drive inclusive change."
           />
 
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">

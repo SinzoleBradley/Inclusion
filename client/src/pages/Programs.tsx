@@ -33,7 +33,8 @@ export default function Programs() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader
             title="Our Programs"
-            subtitle="Comprehensive initiatives designed to empower, educate, and advocate through our three core pillars."
+            subtitle="We are committed to advancing Disability rights, inclusion, and wholistic wellbeing of persons with disabilities. Our work centers on advocacy, capacity building, and community-driven solutions that challenge systemic barriers and promote equal access to opportunities.
+Through targeted technical and life-skills training, we equip persons with disabilities with the tools needed to achieve economic independence and meaningfully participate in the community .Our advocacy efforts promote inclusive policies, accessible systems, and accountability across public and private institutions."
             centered={true}
           />
         </div>

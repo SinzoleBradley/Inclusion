@@ -5,7 +5,7 @@ export const PILLARS = [
     id: "accessible-communication",
     title: "Accessible Communication",
     icon: MessageSquare,
-    description: "Ensuring information is accessible to everyone.",
+    description: "Inclusion Bridge Africa promotes accessible and inclusive communication by advancing sign language access, alternative and augmentative communication, and inclusive information-sharing practices. Our work ensures that persons with disabilities can receive, share, and participate in information equally across education, healthcare, governance, and community spaces.",
     activities: [
       {
         text: "Sign language training for individuals and organizations",
@@ -25,7 +25,7 @@ export const PILLARS = [
     id: "inclusive-systems",
     title: "Inclusive Systems & Environments",
     icon: Award,
-    description: "Creating environments that accommodate everyone.",
+    description: "We advance inclusive systems and communities by addressing structural and attitudinal barriers within institutions, public services, and social spaces. Through accessibility audits, customized capacity-building trainings, and the co-creation of inclusive programs and events, we support organizations to meet accessibility standards and uphold the rights, participation, and dignity of persons with disabilities.",
     activities: [
       {
         text: "Disability inclusion training (workplace, programs, events, and community)",
@@ -45,7 +45,7 @@ export const PILLARS = [
     id: "empowerment-advocacy",
     title: "Empowerment & Advocacy",
     icon: Handshake,
-    description: "Empowering individuals and advocating for rights.",
+    description: "We empower persons with disabilities through skills development, leadership training, and rights-based advocacy. By amplifying lived experiences, shaping policy and practice, and linking skilled persons with disabilities to inclusive employers, service providers, and advocacy networks, we connect talent to opportunity and advance meaningful, sustainable inclusion.",
     activities: [
       {
         text: "Linkages for persons with disabilities to programs, training, and employment opportunities",

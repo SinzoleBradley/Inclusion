@@ -110,24 +110,10 @@ Through targeted technical and life-skills training, we equip persons with disab
                   }} />
                   <ProgramCard program={{
                     id: 2, 
-                    title: "Accessible Agriculture", 
-                    description: "Innovative farming techniques and adapted tools for farmers with physical disabilities.", 
-                    category: "Livelihood", 
-                    imageUrl: "https://images.unsplash.com/photo-1605000797499-95a053524076?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  }} />
-                  <ProgramCard program={{
-                    id: 3, 
                     title: "Policy Watch", 
                     description: "Monitoring implementation of disability rights laws and engaging with policymakers.", 
                     category: "Advocacy", 
                     imageUrl: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  }} />
-                  <ProgramCard program={{
-                    id: 4, 
-                    title: "Women's Circle", 
-                    description: "Peer support and leadership development specifically for women with disabilities.", 
-                    category: "Community", 
-                    imageUrl: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   }} />
                  </>
               )}

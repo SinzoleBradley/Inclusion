@@ -45,7 +45,7 @@ export const PILLARS = [
     id: "empowerment-advocacy",
     title: "Empowerment & Advocacy",
     icon: Handshake,
-    description: "We empower persons with disabilities through skills development, leadership training, and rights-based advocacy. By amplifying lived experiences, shaping policy and practice, and linking skilled persons with disabilities to inclusive employers, service providers, and advocacy networks, we connect talent to opportunity and advance meaningful, sustainable inclusion.",
+    description: "We empower persons with disabilities through skills development, leadership training, and rights-based advocacy, amplifying lived experiences, shaping policy. IBA connects skilled persons with disabilities to prospective employers, service providers, and advocacy networks, thereby linking talent to opportunity and advancing meaningful, sustainable inclusion.",
     activities: [
       {
         text: "Linkages for persons with disabilities to programs, training, and employment opportunities",
@@ -79,20 +79,20 @@ export const EVENTS = [  {
    location: "TBC",
    description: "An introductory course to Kenyan Sign Language (KSL) for individuals interested in learning basic communication skills.",
    category: "Training",
-   image: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfD_example_form_id/viewform"
+   image: "/images/placeholder.png",
+    registrationLink: "https://forms.gle/ET2JUra4xDRTMpEr8"
   },
-  //{
-    //id: 2,
-    //title: "Digital Accessibility Masterclass",
-    //date: "June 10, 2024",
-    //time: "9:00 AM - 4:00 PM",
-    //location: "Online (Zoom)",
-    //description: "Learn how to make your digital content and websites accessible to everyone, covering WCAG 2.1 guidelines.",
-    //category: "Training",
-    //image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    //registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfD_example_form_id/viewform"
-  //},
+  {
+    id: 2,
+    title: "Sign Language Class for kids",
+    date: "June 10, 2024",
+    time: "9:00 AM - 4:00 PM",
+    location: "TBC",
+    description: "A fun and interactive sign language workshop designed specifically for children to learn basic KSL vocabulary and phrases.",
+    category: "Training",
+    image: "/images/placeholder.png",
+    registrationLink: "https://forms.gle/Edjd6zVSjxRDRRZd9"
+  },
   //{
     //id: 3,
     //title: "Community Charity Gala",

@@ -25,14 +25,14 @@ export default function Impact() {
                 title: "From Student to Mentor",
                 content: "After losing his sight, David struggled to find his place in the education system. Through our adaptive tech program, he not only mastered screen readers but now teaches other visually impaired students.",
                 beneficiaryName: "David O.",
-                imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "/images/placeholder.png"
               },
               {
                 id: 2,
                 title: "Breaking Barriers in Business",
                 content: "Sarah, a wheelchair user, faced rejection when applying for jobs. With our entrepreneurship grant and mentorship, she launched a successful tailoring business that now employs three others.",
                 beneficiaryName: "Sarah K.",
-                imageUrl: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                imageUrl: "/images/placeholder.png"
               }
             ]).map((story, index) => (
               <div key={story.id} className="flex flex-col md:flex-row gap-8 items-center bg-white p-6 md:p-10 rounded-3xl shadow-lg border border-gray-100">

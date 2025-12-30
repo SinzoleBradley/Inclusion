@@ -10,12 +10,27 @@ export function ProgramCard({ program }: ProgramCardProps) {
   return (
     <div className="group bg-white rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
       <div className="aspect-video relative overflow-hidden bg-gray-100">
-        <img 
-          src={program.imageUrl || "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80"} // Fallback image
-          alt={program.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-primary shadow-sm">
+        {(program.title === "Sign Language Training Sessions") ? (
+          <video 
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            src="/videos/inclusion-training.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            poster={program.imageUrl || "/images/placeholder.png"}
+          >
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <img 
+            src={program.imageUrl || "/images/placeholder.png"} // Fallback image
+            alt={program.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        )}
+        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-primary shadow-sm z-10">
           {program.category}
         </div>
       </div>

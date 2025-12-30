@@ -1,4 +1,4 @@
-import { pgTable, text, serial, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, timestamp, json } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -18,6 +18,7 @@ export const programs = pgTable("programs", {
   description: text("description").notNull(),
   category: text("category").notNull(), // 'training', 'advocacy', 'community'
   imageUrl: text("image_url"),
+  gallery: json("gallery").$type<{ type: 'image' | 'video', src: string }[]>(),
 });
 
 export const stories = pgTable("stories", {

@@ -106,14 +106,16 @@ Through targeted technical and life-skills training, we equip persons with disab
                     title: "Tech for All", 
                     description: "Digital literacy training equipping youth with disabilities with coding and design skills.", 
                     category: "Technology", 
-                    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    imageUrl: "/images/placeholder.png",
+                    gallery: []
                   }} />
                   <ProgramCard program={{
                     id: 2, 
                     title: "Policy Watch", 
                     description: "Monitoring implementation of disability rights laws and engaging with policymakers.", 
                     category: "Advocacy", 
-                    imageUrl: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    imageUrl: "/images/placeholder.png",
+                    gallery: []
                   }} />
                  </>
               )}

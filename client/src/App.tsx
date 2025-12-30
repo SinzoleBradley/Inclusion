@@ -14,6 +14,7 @@ import Impact from "@/pages/Impact";
 import Donate from "@/pages/Donate";
 import Accessibility from "@/pages/Accessibility";
 import Contact from "@/pages/Contact";
+import ProgramDetails from "@/pages/ProgramDetails";
 
 function Router() {
   return (
@@ -21,6 +22,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/programs" component={Programs} />
+      <Route path="/programs/:id" component={ProgramDetails} />
       <Route path="/events" component={Events} />
       <Route path="/impact" component={Impact} />
       {/* <Route path="/donate" component={Donate} /> */}

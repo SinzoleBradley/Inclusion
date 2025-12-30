@@ -10,19 +10,19 @@ const TEAM_MEMBERS = [
     name: "Victor Mbatia",
     role: "Co-Director IBA",
     bio: "",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/team/rev.jpg",
   },
   {
     name: "Roslyn Njuguna",
     role: "Co-Director IBA",
     bio: "",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/team/brad.jpg",
   },
   {
     name: "Rev Ignitious Malimo",
     role: "Board Member",
     bio: "",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/placeholder.png",
   },
   {
     name: "Rev Edwin Masai",
@@ -34,19 +34,19 @@ const TEAM_MEMBERS = [
     name: "Simon Ngina",
     role: "Sign Language Trainer",
     bio: "",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/placeholder.png",
   },
   {
     name: "Benson Kigotho",
     role: "Sign Language Trainer",
     bio: "",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/placeholder.png",
   },
   {
     name: "Macnum Vita",
     role: "Disability Inclusion Facilitator",
     bio: "",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/placeholder.png",
   },
   {
     name: "Bradley Sinzole",
@@ -64,7 +64,7 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader 
             title="Inclusion Bridge Africa" 
-            subtitle="A society where every person with a disability is fully included, empowered, and engaged in all spheres of life"
+            subtitle="Hands On Inclusion"
             centered={true}
           />
         </div>
@@ -88,8 +88,8 @@ export default function About() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Team collaboration" 
+                  src="/images/placeholder.png"
+                  alt="Team collaboration"
                   className="w-full h-full object-cover"
                 />
               </div>

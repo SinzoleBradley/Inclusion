@@ -48,24 +48,42 @@ export class MemStorage implements IStorage {
     const mockPrograms: Program[] = [
       {
         id: 1,
-        title: "Inclusion Training",
+        title: "Sign Language Training Sessions",
         description: "Workshops and seminars for schools and businesses to foster inclusive environments.",
         category: "training",
-        imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80"
+        imageUrl: "/images/placeholder.png",
+        gallery: [
+          { type: 'video', src: '/videos/inclusion-training.mp4' },
+          { type: 'image', src: '/images/class.png' },
+          { type: 'video', src: '/videos/speller.mp4' },
+          { type: 'video', src: '/videos/children.mp4' },
+          { type: 'video', src: '/videos/classes.mp4' },
+          { type: 'video', src: '/videos/program-highlight.mp4' }
+        ]
       },
       {
         id: 2,
         title: "Community Empowerment",
         description: "Grassroots initiatives supporting social and economic independence.",
         category: "community",
-        imageUrl: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&q=80"
+        imageUrl: "/images/placeholder.png",
+        gallery: [
+          { type: 'image', src: '/images/placeholder.png' },
+          { type: 'image', src: '/images/placeholder.png' },
+          { type: 'image', src: '/images/placeholder.png' }
+        ]
       },
       {
         id: 3,
         title: "Disability Advocacy",
         description: "Championing policy changes and rights for persons with disabilities.",
         category: "advocacy",
-        imageUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80"
+        imageUrl: "/images/placeholder.png",
+        gallery: [
+          { type: 'image', src: '/images/placeholder.png' },
+          { type: 'image', src: '/images/placeholder.png' },
+          { type: 'image', src: '/images/placeholder.png' }
+        ]
       }
     ];
 
@@ -75,14 +93,14 @@ export class MemStorage implements IStorage {
         title: "Finding My Voice",
         content: "Through the advocacy program, I learned to speak up for my rights and now mentor others.",
         beneficiaryName: "Sarah M.",
-        imageUrl: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80"
+        imageUrl: "/images/placeholder.png"
       },
       {
         id: 2,
         title: "Skills for Life",
         content: "The vocational training gave me the skills to start my own tailoring business.",
         beneficiaryName: "David O.",
-        imageUrl: "https://images.unsplash.com/photo-1529390003868-6c04176d091e?auto=format&fit=crop&q=80"
+        imageUrl: "/images/placeholder.png"
       }
     ];
 
@@ -110,22 +128,40 @@ export class DatabaseStorage implements IStorage {
     if (existingPrograms.length === 0) {
       await db.insert(programs).values([
         {
-          title: "Inclusion Training",
+          title: "Sign Language Training Sessions",
           description: "Workshops and seminars for schools and businesses to foster inclusive environments.",
           category: "training",
-          imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80"
-        },
+          imageUrl: "/images/placeholder.png",
+        gallery: [
+          { type: 'video', src: '/videos/inclusion-training.mp4' },
+          { type: 'image', src: '/images/class.png' },
+          { type: 'video', src: '/videos/speller.mp4' },
+          { type: 'video', src: '/videos/children.mp4' },
+          { type: 'video', src: '/videos/classes.mp4' },
+          { type: 'video', src: '/videos/program-highlight.mp4' }
+        ]
+      },
         {
           title: "Community Empowerment",
           description: "Grassroots initiatives supporting social and economic independence.",
           category: "community",
-          imageUrl: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&q=80"
+          imageUrl: "/images/placeholder.png",
+          gallery: [
+            { type: 'image', src: '/images/placeholder.png' },
+            { type: 'image', src: '/images/placeholder.png' },
+            { type: 'image', src: '/images/placeholder.png' }
+          ]
         },
         {
           title: "Disability Advocacy",
           description: "Championing policy changes and rights for persons with disabilities.",
           category: "advocacy",
-          imageUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80"
+          imageUrl: "/images/placeholder.png",
+          gallery: [
+            { type: 'image', src: '/images/placeholder.png' },
+            { type: 'image', src: '/images/placeholder.png' },
+            { type: 'image', src: '/images/placeholder.png' }
+          ]
         }
       ]);
     }
@@ -137,13 +173,13 @@ export class DatabaseStorage implements IStorage {
           title: "Finding My Voice",
           content: "Through the advocacy program, I learned to speak up for my rights and now mentor others.",
           beneficiaryName: "Sarah M.",
-          imageUrl: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80"
+          imageUrl: "/images/placeholder.png"
         },
         {
           title: "Skills for Life",
           content: "The vocational training gave me the skills to start my own tailoring business.",
           beneficiaryName: "David O.",
-          imageUrl: "https://images.unsplash.com/photo-1529390003868-6c04176d091e?auto=format&fit=crop&q=80"
+          imageUrl: "/images/placeholder.png"
         }
       ]);
     }

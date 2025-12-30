@@ -289,7 +289,8 @@ export default function Home() {
                         "Ensuring children with disabilities access quality education through teacher training and accessible resources.",
                       category: "Education",
                       imageUrl:
-                        "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        "/images/placeholder.png",
+                      gallery: [],
                     }}
                   />
                   <ProgramCard
@@ -300,7 +301,8 @@ export default function Home() {
                         "Technical training and mentorship to support entrepreneurship and employment readiness.",
                       category: "Livelihood",
                       imageUrl:
-                        "https://images.unsplash.com/photo-1590012314607-6abc9ddb4522?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        "/images/placeholder.png",
+                      gallery: [],
                     }}
                   />
                   <ProgramCard
@@ -311,7 +313,8 @@ export default function Home() {
                         "Workshops and campaigns to promote policy change and community awareness.",
                       category: "Advocacy",
                       imageUrl:
-                        "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                        "/images/placeholder.png",
+                      gallery: [],
                     }}
                   />
                 </>

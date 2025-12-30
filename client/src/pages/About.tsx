@@ -10,13 +10,13 @@ const TEAM_MEMBERS = [
     name: "Victor Mbatia",
     role: "Co-Director IBA",
     bio: "",
-    image: "/team/rev.jpg",
+    image: "/images/placeholder.png",
   },
   {
     name: "Roslyn Njuguna",
     role: "Co-Director IBA",
     bio: "",
-    image: "/team/brad.jpg",
+    image: "/images/placeholder.png",
   },
   {
     name: "Rev Ignitious Malimo",

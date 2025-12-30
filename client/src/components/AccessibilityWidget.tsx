@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Accessibility, Sun, Moon, Type, EyeOff, RotateCcw, X, Languages, Globe, Monitor } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Accessibility, Sun, Moon, Type, EyeOff, RotateCcw, X, Languages, Globe, Monitor, Volume2, Play, Pause, Square } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
@@ -34,6 +34,63 @@ export function AccessibilityWidget() {
   const [highContrast, setHighContrast] = useState(false);
   const [grayscale, setGrayscale] = useState(false);
   const [language, setLanguage] = useState("en");
+  
+  // Text to Speech states
+  const [isReading, setIsReading] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+
+  useEffect(() => {
+    // Cleanup speech on unmount
+    return () => {
+      window.speechSynthesis.cancel();
+    };
+  }, []);
+
+  const handleSpeak = () => {
+    if (isPaused) {
+      window.speechSynthesis.resume();
+      setIsPaused(false);
+      setIsReading(true);
+      return;
+    }
+
+    if (isReading) {
+      window.speechSynthesis.pause();
+      setIsPaused(true);
+      return;
+    }
+
+    const text = document.body.innerText;
+    const utterance = new SpeechSynthesisUtterance(text);
+    
+    // Configure utterance
+    utterance.lang = language;
+    utterance.rate = 1;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+    
+    utterance.onend = () => {
+      setIsReading(false);
+      setIsPaused(false);
+    };
+
+    utterance.onerror = () => {
+      setIsReading(false);
+      setIsPaused(false);
+    };
+
+    utteranceRef.current = utterance;
+    window.speechSynthesis.cancel(); // Cancel any existing speech
+    window.speechSynthesis.speak(utterance);
+    setIsReading(true);
+  };
+
+  const handleStop = () => {
+    window.speechSynthesis.cancel();
+    setIsReading(false);
+    setIsPaused(false);
+  };
 
   useEffect(() => {
     if (language === "en") {
@@ -111,6 +168,8 @@ export function AccessibilityWidget() {
     setFontSize("normal");
     setHighContrast(false);
     setGrayscale(false);
+    setLanguage("en");
+    handleStop();
   };
 
   return (
@@ -193,6 +252,40 @@ export function AccessibilityWidget() {
                   <Moon className="w-5 h-5" />
                   Grayscale
                 </Button>
+              </div>
+            </div>
+
+            {/* Text to Speech */}
+            <div className="space-y-3">
+              <label className="text-sm font-semibold flex items-center gap-2 text-gray-500">
+                <Volume2 className="w-4 h-4" /> Text to Speech
+              </label>
+              <div className="flex gap-2">
+                <Button
+                  variant={isReading && !isPaused ? "default" : "outline"}
+                  className="flex-1"
+                  onClick={handleSpeak}
+                >
+                  {isReading && !isPaused ? (
+                    <>
+                      <Pause className="w-4 h-4 mr-2" /> Pause
+                    </>
+                  ) : (
+                    <>
+                      <Play className="w-4 h-4 mr-2" /> {isPaused ? "Resume" : "Read Page"}
+                    </>
+                  )}
+                </Button>
+                {(isReading || isPaused) && (
+                  <Button
+                    variant="destructive"
+                    size="icon"
+                    onClick={handleStop}
+                    title="Stop Reading"
+                  >
+                    <Square className="w-4 h-4 fill-current" />
+                  </Button>
+                )}
               </div>
             </div>
 

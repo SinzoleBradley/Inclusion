@@ -1,4 +1,5 @@
 import { MessageSquare, Award, Handshake } from "lucide-react";
+import { type Program } from "@shared/schema";
 
 export const PILLARS = [
   {
@@ -73,9 +74,9 @@ export const PARTNERS = [
 
 export const EVENTS = [  {
    id: 1,
-   title: "Sign Language Class for Beginners",
-   date: "January 15, 2026",
-   time: "10:00 AM - 2:00 PM",
+   title: "Sign Language Class for Adults",
+   //date: "January 15, 2026",
+   time: "7:00 PM - 9:00 PM",
    location: "TBC",
    description: "An introductory course to Kenyan Sign Language (KSL) for individuals interested in learning basic communication skills.",
    category: "Training",
@@ -85,8 +86,8 @@ export const EVENTS = [  {
   {
     id: 2,
     title: "Sign Language Class for kids",
-    date: "June 10, 2024",
-    time: "9:00 AM - 4:00 PM",
+    //date: "June 10, 2026",
+    time: "9:00 AM - 1:00 PM",
     location: "TBC",
     description: "A fun and interactive sign language workshop designed specifically for children to learn basic KSL vocabulary and phrases.",
     category: "Training",
@@ -123,7 +124,7 @@ export const ANNOUNCEMENTS = [
   }
 ];
 
-export const PROGRAMS = [
+export const PROGRAMS: Program[] = [
   {
     id: 1,
     title: "Sign Language Training Sessions",

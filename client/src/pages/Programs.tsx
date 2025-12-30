@@ -53,7 +53,7 @@ Through targeted technical and life-skills training, we equip persons with disab
                 <div className="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 text-primary">
                   <pillar.icon className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-bold text-primary mb-2">
                   {pillar.title}
                 </h3>
                 <p className="text-sm text-muted-foreground mb-6">
@@ -66,7 +66,7 @@ Through targeted technical and life-skills training, we equip persons with disab
                         <li key={i} className="flex flex-col gap-3 pb-3 border-b border-gray-50 last:border-0 last:pb-0">
                             <div className="flex items-start gap-2.5">
                                 <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                <span className="text-sm text-gray-600 font-medium leading-relaxed">{activity.text}</span>
+                                <span className="text-base text-gray-900 font-bold leading-relaxed">{activity.text}</span>
                             </div>
                             {activity.requestQuote && (
                                 <div className="pl-7">

@@ -129,7 +129,7 @@ export default function Home() {
                     <div className="w-24 h-24 bg-primary/5 rounded-3xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                       <pillar.icon className="w-12 h-12" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900 font-display">
+                    <h3 className="text-2xl font-bold mb-4 text-primary font-display">
                       {pillar.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed mb-8">
@@ -166,7 +166,7 @@ export default function Home() {
                         >
                           <div className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                            <span className="text-base text-gray-700 leading-relaxed">
+                            <span className="text-base text-gray-900 font-bold leading-relaxed">
                               {activity.text}
                             </span>
                           </div>

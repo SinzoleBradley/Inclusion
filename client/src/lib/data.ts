@@ -122,3 +122,62 @@ export const ANNOUNCEMENTS = [
     type: "Opportunity"
   }
 ];
+
+export const PROGRAMS = [
+  {
+    id: 1,
+    title: "Sign Language Training Sessions",
+    description: "Workshops and seminars for schools and businesses to foster inclusive environments.",
+    category: "training",
+    imageUrl: "/images/placeholder.png",
+    gallery: [
+      { type: 'video', src: '/videos/inclusion-training.mp4' },
+      { type: 'image', src: '/images/class.png' },
+      { type: 'video', src: '/videos/speller.mp4' },
+      { type: 'video', src: '/videos/children.mp4' },
+      { type: 'video', src: '/videos/classes.mp4' },
+      { type: 'video', src: '/videos/program-highlight.mp4' }
+    ]
+  },
+  {
+    id: 2,
+    title: "Community Empowerment",
+    description: "Grassroots initiatives supporting social and economic independence.",
+    category: "community",
+    imageUrl: "/images/placeholder.png",
+    gallery: [
+      { type: 'image', src: '/images/placeholder.png' },
+      { type: 'image', src: '/images/placeholder.png' },
+      { type: 'image', src: '/images/placeholder.png' }
+    ]
+  },
+  {
+    id: 3,
+    title: "Disability Advocacy",
+    description: "Championing policy changes and rights for persons with disabilities.",
+    category: "advocacy",
+    imageUrl: "/images/placeholder.png",
+    gallery: [
+      { type: 'image', src: '/images/placeholder.png' },
+      { type: 'image', src: '/images/placeholder.png' },
+      { type: 'image', src: '/images/placeholder.png' }
+    ]
+  }
+];
+
+export const STORIES = [
+  {
+    id: 1,
+    title: "Finding My Voice",
+    content: "Through the advocacy program, I learned to speak up for my rights and now mentor others.",
+    beneficiaryName: "Sarah M.",
+    imageUrl: "/images/placeholder.png"
+  },
+  {
+    id: 2,
+    title: "Skills for Life",
+    content: "The vocational training gave me the skills to start my own tailoring business.",
+    beneficiaryName: "David O.",
+    imageUrl: "/images/placeholder.png"
+  }
+];

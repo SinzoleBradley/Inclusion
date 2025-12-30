@@ -1,15 +1,14 @@
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { api } from "@shared/routes";
 import { type InsertMessage } from "@shared/schema";
+import { PROGRAMS, STORIES } from "@/lib/data";
 
 // Programs Hooks
 export function usePrograms() {
   return useQuery({
-    queryKey: [api.programs.list.path],
+    queryKey: ["programs"],
     queryFn: async () => {
-      const res = await fetch(api.programs.list.path);
-      if (!res.ok) throw new Error("Failed to fetch programs");
-      return api.programs.list.responses[200].parse(await res.json());
+      return PROGRAMS;
     },
   });
 }
@@ -17,11 +16,9 @@ export function usePrograms() {
 // Stories Hooks
 export function useStories() {
   return useQuery({
-    queryKey: [api.stories.list.path],
+    queryKey: ["stories"],
     queryFn: async () => {
-      const res = await fetch(api.stories.list.path);
-      if (!res.ok) throw new Error("Failed to fetch stories");
-      return api.stories.list.responses[200].parse(await res.json());
+      return STORIES;
     },
   });
 }

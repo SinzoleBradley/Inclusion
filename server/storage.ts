@@ -49,7 +49,7 @@ export class MemStorage implements IStorage {
       {
         id: 1,
         title: "Sign Language Training Sessions",
-        description: "Workshops and seminars for schools and businesses to foster inclusive environments.",
+        description: "Trainings and seminars for schools and businesses to foster inclusive environments.",
         category: "training",
         imageUrl: "/images/placeholder.png",
         gallery: [
@@ -75,8 +75,8 @@ export class MemStorage implements IStorage {
       },
       {
         id: 3,
-        title: "Disability Advocacy",
-        description: "Championing policy changes and rights for persons with disabilities.",
+        title: "Skills Development and Linkages for Persons with Disabilities",
+        description: "We equip persons with disabilities with life skills and technical skills that enhance independence, employability, and meaningful participation in society. Our rights-based trainings strengthen confidence, leadership, communication, and practical competencies aligned to diverse livelihood and career pathways.",
         category: "advocacy",
         imageUrl: "/images/placeholder.png",
         gallery: [
@@ -129,7 +129,7 @@ export class DatabaseStorage implements IStorage {
       await db.insert(programs).values([
         {
           title: "Sign Language Training Sessions",
-          description: "Workshops and seminars for schools and businesses to foster inclusive environments.",
+          description: "We offer Basic and Advanced Kenya Sign Language (KSL) training for children and adults, designed for individual learners and organizations seeking inclusive communication skills.",
           category: "training",
           imageUrl: "/images/placeholder.png",
         gallery: [
@@ -143,7 +143,7 @@ export class DatabaseStorage implements IStorage {
       },
         {
           title: "Community Empowerment",
-          description: "Grassroots initiatives supporting social and economic independence.",
+          description: "We partner with organizations, communities, and event organizers to build disability-inclusive spaces. Through participatory accessibility assessments, tailored trainings, and co-created solutions with persons with disabilities, we support inclusive, responsive, and community-owned initiatives.",
           category: "community",
           imageUrl: "/images/placeholder.png",
           gallery: [
@@ -153,8 +153,8 @@ export class DatabaseStorage implements IStorage {
           ]
         },
         {
-          title: "Disability Advocacy",
-          description: "Championing policy changes and rights for persons with disabilities.",
+          title: "Skills Development and Linkages for Persons with Disabilities",
+          description: "We equip persons with disabilities with life skills and technical skills that enhance independence, employability, and meaningful participation in society. Our rights-based trainings strengthen confidence, leadership, communication, and practical competencies aligned to diverse livelihood and career pathways.",
           category: "advocacy",
           imageUrl: "/images/placeholder.png",
           gallery: [

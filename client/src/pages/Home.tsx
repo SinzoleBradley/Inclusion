@@ -218,42 +218,6 @@ export default function Home() {
             title="Our Mission"
             subtitle="To empower organizations and communities to embrace and practice true disability inclusion by providing professional sign language services, inclusive training, accessibility support, and strategic linkages that connect people with disabilities to meaningful opportunities."
           />
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Award,
-                title: "Empowerment",
-                desc: "Providing tools, skills, and confidence for economic independence.",
-              },
-              {
-                icon: Users,
-                title: "Inclusion",
-                desc: "Creating spaces where persons with disabilities are valued leaders.",
-              },
-              {
-                icon: Heart,
-                title: "Dignity",
-                desc: "Upholding the inherent worth and rights of every individual.",
-              },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ y: -5 }}
-                className="bg-white p-8 rounded-3xl shadow-lg shadow-gray-100 border border-gray-100 hover:border-primary/20 transition-all"
-              >
-                <div className="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 text-primary">
-                  <item.icon className="w-7 h-7" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 font-display">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

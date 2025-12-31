@@ -6,7 +6,7 @@ export const PILLARS = [
     id: "accessible-communication",
     title: "Accessible Communication",
     icon: MessageSquare,
-    description: "Inclusion Bridge Africa promotes accessible and inclusive communication by advancing sign language access, alternative and augmentative communication, and inclusive information-sharing practices. Our work ensures that persons with disabilities can receive, share, and participate in information equally across education, healthcare, governance, and community spaces.",
+    description: "We promote accessible and inclusive communication by advancing sign language access, alternative and augmentative communication, and inclusive information-sharing practices. Our work ensures that persons with disabilities can receive, share, and participate in information equally across education, healthcare, governance, and community spaces.",
     activities: [
       {
         text: "Sign language training for individuals and organizations",
@@ -46,7 +46,7 @@ export const PILLARS = [
     id: "empowerment-advocacy",
     title: "Empowerment & Advocacy",
     icon: Handshake,
-    description: "We empower persons with disabilities through skills development, leadership training, and rights-based advocacy, amplifying lived experiences, shaping policy. IBA connects skilled persons with disabilities to prospective employers, service providers, and advocacy networks, thereby linking talent to opportunity and advancing meaningful, sustainable inclusion.",
+    description: "We empower persons with disabilities through skills development, leadership training, and rights-based advocacy, amplifying lived experiences, shaping policy. We also connects skilled persons with disabilities to prospective employers, service providers, and advocacy networks, thereby linking talent to opportunity and advancing meaningful, sustainable inclusion.",
     activities: [
       {
         text: "Linkages for persons with disabilities to programs, training, and employment opportunities",
@@ -89,7 +89,7 @@ export const EVENTS = [  {
     //date: "June 10, 2026",
     time: "9:00 AM - 1:00 PM",
     location: "TBC",
-    description: "A fun and interactive sign language workshop designed specifically for children to learn basic KSL vocabulary and phrases.",
+    description: "A fun and interactive sign language training designed specifically for children to learn basic KSL vocabulary and phrases.",
     category: "Training",
     image: "/images/placeholder.png",
     registrationLink: "https://forms.gle/Edjd6zVSjxRDRRZd9"
@@ -145,19 +145,21 @@ export const PROGRAMS: Program[] = [
     title: "Community Empowerment",
     description: "We partner with organizations, communities, and event organizers to build disability-inclusive spaces. Through participatory accessibility assessments, tailored trainings, and co-created solutions with persons with disabilities, we support inclusive, responsive, and community-owned initiatives.",
     category: "community",
-    imageUrl: "/images/placeholder.png",
+    imageUrl: "/images/com.png",
     gallery: [
-      { type: 'image', src: '/images/placeholder.png' },
-      { type: 'image', src: '/images/placeholder.png' },
-      { type: 'image', src: '/images/placeholder.png' }
+      { type: 'image', src: '/images/com.png' },
+      { type: 'image', src: '/images/_com1.png' },
+      { type: 'image', src: '/images/_com3.png' },
+      { type: 'image', src: '/images/_com5.png' },
+      { type: 'image', src: '/images/_com6.png' }
     ]
   },
   {
     id: 3,
-    title: "Disability Advocacy",
-    description: "Championing policy changes and rights for persons with disabilities.",
+    title: "Skills Development and Linkages for Persons with Disabilities",
+    description: "We equip persons with disabilities with life skills and technical skills that enhance independence, employability, and meaningful participation in society. Our rights-based trainings strengthen confidence, leadership, communication, and practical competencies aligned to diverse livelihood and career pathways.",
     category: "advocacy",
-    imageUrl: "/images/placeholder.png",
+    imageUrl: "/images/_com5.png",
     gallery: [
       { type: 'image', src: '/images/placeholder.png' },
       { type: 'image', src: '/images/placeholder.png' },

@@ -120,7 +120,7 @@ export default function Contact() {
                   <a href="https://www.instagram.com/Inclusion_bridge_Africa" target="_blank" rel="noopener noreferrer" className="bg-white p-3 rounded-full text-primary hover:text-white hover:bg-primary transition-all shadow-sm border border-border" aria-label="Instagram">
                     <FaInstagram className="w-5 h-5" />
                   </a>
-                  <a href="https://www.tiktok.com/@Inclusion.bridge" target="_blank" rel="noopener noreferrer" className="bg-white p-3 rounded-full text-primary hover:text-white hover:bg-primary transition-all shadow-sm border border-border" aria-label="TikTok">
+                  <a href="https://www.tiktok.com/@inclusion.bridge?_r=1&_t=ZM-92gJyyWICpI" target="_blank" rel="noopener noreferrer" className="bg-white p-3 rounded-full text-primary hover:text-white hover:bg-primary transition-all shadow-sm border border-border" aria-label="TikTok">
                     <FaTiktok className="w-5 h-5" />
                   </a>
                   <a href="https://www.linkedin.com/company/inclusion-bridge-africa" target="_blank" rel="noopener noreferrer" className="bg-white p-3 rounded-full text-primary hover:text-white hover:bg-primary transition-all shadow-sm border border-border" aria-label="LinkedIn">

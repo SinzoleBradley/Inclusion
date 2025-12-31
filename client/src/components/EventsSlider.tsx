@@ -33,7 +33,7 @@ export function EventsSlider() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 font-display">Upcoming Events & Trainings</h2>
-            <p className="text-muted-foreground mt-2">Join us in our latest activities and workshops.</p>
+            <p className="text-muted-foreground mt-2">Join us in our latest activities and trainings.</p>
           </div>
           <Link href="/events">
             <Button variant="outline" className="hidden md:flex">

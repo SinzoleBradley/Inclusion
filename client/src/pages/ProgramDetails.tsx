@@ -39,12 +39,14 @@ export default function ProgramDetails() {
       <div className="pt-32 pb-20 bg-primary/5">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-8">
-            <Link href="/programs">
-              <Button variant="ghost" className="pl-0 hover:bg-transparent hover:text-primary">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Programs
-              </Button>
-            </Link>
+            <Button 
+              variant="ghost" 
+              className="pl-0 hover:bg-transparent hover:text-primary"
+              onClick={() => window.history.back()}
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Programs
+            </Button>
           </div>
           <SectionHeader
             title={program.title}
@@ -165,6 +167,30 @@ export default function ProgramDetails() {
                         <div>
                           <h5 className="font-semibold text-gray-900">Partnerships & Capacity Building</h5>
                           <p>Collaborations that strengthen systems and sustain inclusive practice</p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                ) : program.title === "Skills Development and Linkages for Persons with Disabilities" ? (
+                  <div className="space-y-8">
+                    <p>
+                      We equip persons with disabilities with life skills and technical skills that enhance independence, employability, and meaningful participation in society. Our rights-based trainings strengthen confidence, leadership, communication, and practical competencies aligned to diverse livelihood and career pathways.
+                    </p>
+                    
+                    <section>
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">Key Components</h4>
+                      <div className="space-y-6">
+                        <div>
+                          <h5 className="font-semibold text-gray-900">Individual Learner–Oriented Approach</h5>
+                          <p>Training tailored to individual strengths, needs, and goals.</p>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-gray-900">Work Placement Linkages</h5>
+                          <p>Support with work placement and exposure opportunities upon completion of training.</p>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-gray-900">Life Skills Training</h5>
+                          <p>Building confidence, communication, leadership, and workplace readiness skills.</p>
                         </div>
                       </div>
                     </section>

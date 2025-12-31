@@ -71,8 +71,16 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="pt-32 pb-20 bg-primary text-white text-center">
-        <div className="container mx-auto px-4">
+      <div className="relative pt-32 pb-20">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/class.png" 
+            alt="Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/90" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
           <SectionHeader 
             title="Get In Touch" 
             subtitle="We'd love to hear from you. Reach out to us for inquiries, partnerships, or support." 

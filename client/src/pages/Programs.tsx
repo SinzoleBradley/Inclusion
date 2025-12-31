@@ -29,13 +29,22 @@ export default function Programs() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="pt-32 pb-20 bg-primary/5">
-        <div className="container mx-auto px-4 md:px-6">
+      <div className="relative pt-32 pb-20">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/class.png" 
+            alt="Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/90" />
+        </div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <SectionHeader
             title="Our Programs"
             subtitle="We are committed to advancing Disability rights, inclusion, and wholistic wellbeing of persons with disabilities. Our work centers on advocacy, capacity building, and community-driven solutions that challenge systemic barriers and promote equal access to opportunities.
 Through targeted technical and life-skills training, we equip persons with disabilities with the tools needed to achieve economic independence and meaningfully participate in the community .Our advocacy efforts promote inclusive policies, accessible systems, and accountability across public and private institutions."
             centered={true}
+            light={true}
           />
         </div>
       </div>
@@ -48,38 +57,45 @@ Through targeted technical and life-skills training, we equip persons with disab
               <div
                 key={pillar.id}
                 id={pillar.id}
-                className="p-8 rounded-3xl bg-white border border-gray-100 shadow-lg transition-all duration-300 hover:shadow-xl scroll-mt-32 flex flex-col"
+                className="relative overflow-hidden p-8 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-xl scroll-mt-32 flex flex-col group"
               >
-                <div className="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 text-primary">
-                  <pillar.icon className="w-7 h-7" />
+                <div className="absolute inset-0 z-0">
+                  <img src="/images/class.png" alt="" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-primary/90" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">
-                  {pillar.title}
-                </h3>
-                <p className="text-sm text-muted-foreground mb-6">
-                    {pillar.description}
-                </p>
 
-                <div className="space-y-4 flex-grow">
-                    <ul className="space-y-4">
-                        {pillar.activities.map((activity, i) => (
-                        <li key={i} className="flex flex-col gap-3 pb-3 border-b border-gray-50 last:border-0 last:pb-0">
-                            <div className="flex items-start gap-2.5">
-                                <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                <span className="text-base text-gray-900 font-bold leading-relaxed">{activity.text}</span>
-                            </div>
-                            {activity.requestQuote && (
-                                <div className="pl-7">
-                                    <Link href={`/contact?subject=Quote Request: ${activity.text}`}>
-                                        <Button variant="outline" size="sm" className="h-8 text-xs font-semibold border-primary/20 hover:border-primary hover:bg-primary/5 text-primary">
-                                            Request Quote
-                                        </Button>
-                                    </Link>
+                <div className="relative z-10 flex flex-col h-full">
+                    <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 text-white">
+                      <pillar.icon className="w-7 h-7" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-sm text-white/80 mb-6">
+                        {pillar.description}
+                    </p>
+
+                    <div className="space-y-4 flex-grow">
+                        <ul className="space-y-4">
+                            {pillar.activities.map((activity, i) => (
+                            <li key={i} className="flex flex-col gap-3 pb-3 border-b border-white/10 last:border-0 last:pb-0">
+                                <div className="flex items-start gap-2.5">
+                                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                                    <span className="text-base text-white font-bold leading-relaxed">{activity.text}</span>
                                 </div>
-                            )}
-                        </li>
-                        ))}
-                    </ul>
+                                {activity.requestQuote && (
+                                    <div className="pl-7">
+                                        <Link href={`/contact?subject=Quote Request: ${activity.text}`}>
+                                            <Button variant="outline" size="sm" className="h-8 text-xs font-semibold border-white/30 text-white hover:bg-white/10 rounded-full">
+                                                Request Quote
+                                            </Button>
+                                        </Link>
+                                    </div>
+                                )}
+                            </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
               </div>
             ))}

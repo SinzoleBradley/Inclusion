@@ -60,12 +60,21 @@ export default function About() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="pt-32 pb-20 bg-primary/5">
-        <div className="container mx-auto px-4 md:px-6">
+      <div className="relative pt-32 pb-20">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/class.png" 
+            alt="Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/90" />
+        </div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <SectionHeader 
             title="Inclusion Bridge Africa" 
             subtitle="Hands On Inclusion"
             centered={true}
+            light={true}
           />
         </div>
       </div>

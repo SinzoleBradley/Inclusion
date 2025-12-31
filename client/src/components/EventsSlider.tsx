@@ -66,7 +66,7 @@ export function EventsSlider() {
                         {event.category}
                       </Badge>
                       <div className="absolute bottom-4 left-4 z-20 text-white flex flex-col">
-                        <span className="font-bold text-lg leading-tight">{event.date}</span>
+                        <span className="font-bold text-lg leading-tight">{/*event.date*/}</span>
                         <span className="text-sm opacity-90">{event.time}</span>
                       </div>
                     </div>

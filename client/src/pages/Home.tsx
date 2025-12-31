@@ -124,20 +124,27 @@ export default function Home() {
                 <DialogTrigger asChild>
                   <motion.div
                     whileHover={{ y: -5 }}
-                    className="bg-white p-10 rounded-3xl shadow-lg shadow-gray-100 border border-gray-100 hover:border-primary/20 transition-all flex flex-col items-center text-center h-full cursor-pointer group"
+                    className="relative overflow-hidden p-10 rounded-3xl shadow-lg shadow-gray-100 border border-gray-100 hover:border-primary/20 transition-all flex flex-col items-center text-center h-full cursor-pointer group"
                   >
-                    <div className="w-24 h-24 bg-primary/5 rounded-3xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                      <pillar.icon className="w-12 h-12" />
+                    <div className="absolute inset-0 z-0">
+                      <img src="/images/class.png" alt="" className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-primary/90" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-primary font-display">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-8">
-                      {pillar.description}
-                    </p>
+                    
+                    <div className="relative z-10 flex flex-col items-center h-full w-full">
+                      <div className="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center mb-8 text-white group-hover:bg-white group-hover:text-primary transition-colors duration-300">
+                        <pillar.icon className="w-12 h-12" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4 text-white font-display">
+                        {pillar.title}
+                      </h3>
+                      <p className="text-white/80 leading-relaxed mb-8">
+                        {pillar.description}
+                      </p>
 
-                    <div className="mt-auto text-primary font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
-                      Learn More <ArrowRight className="w-4 h-4" />
+                      <div className="mt-auto text-white font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Learn More <ArrowRight className="w-4 h-4" />
+                      </div>
                     </div>
                   </motion.div>
                 </DialogTrigger>

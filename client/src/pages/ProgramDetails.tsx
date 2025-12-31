@@ -85,19 +85,98 @@ export default function ProgramDetails() {
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">About the Program</h3>
               <div className="prose prose-lg text-muted-foreground">
-                <p>
-                  Our {program.title} initiative is designed to create lasting impact through targeted interventions and community engagement. 
-                  We believe in a holistic approach that addresses not just immediate needs but also structural barriers to inclusion.
-                </p>
-                <p>
-                  Key components of this program include:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Customized training modules and workshops</li>
-                  <li>Community outreach and sensitization</li>
-                  <li>Monitoring and evaluation to ensure impact</li>
-                  <li>Partnership with local stakeholders</li>
-                </ul>
+                {program.title === "Sign Language Training Sessions" ? (
+                  <div className="space-y-8">
+                    <section>
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">Basic Conversational Kenya Sign Language (KSL)</h4>
+                      <p className="mb-4">
+                        Learn everyday Kenya Sign Language skills for daily communication.
+                      </p>
+                      <p className="font-semibold mb-2">You will learn:</p>
+                      <ul className="list-disc pl-6 space-y-2">
+                        <li>Common signs used in daily conversations</li>
+                        <li>Fingerspelling and basic sentence structure</li>
+                        <li>Cultural awareness and communication best practices</li>
+                      </ul>
+                    </section>
+
+                    <section>
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">Advanced Kenya Sign Language (KSL)</h4>
+                      <p className="mb-4">
+                        This program helps you build fluency and confidence for complex conversations. It is ideal for individuals working or engaging in professional, academic, or institutional environments where effective communication with the Deaf community is essential.
+                      </p>
+                      <p className="font-semibold mb-2">You will learn:</p>
+                      <ul className="list-disc pl-6 space-y-2">
+                        <li>Advanced vocabulary and grammar</li>
+                        <li>Professional and workplace communication in KSL</li>
+                        <li>Culturally appropriate interaction in formal settings</li>
+                      </ul>
+                    </section>
+
+                    <section>
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">Practical Attachment Opportunities</h4>
+                      <p className="mb-4">
+                        Gain real-world experience through hands-on learning with the Deaf community. These attachments help you apply what you have learned, improve fluency, and interact naturally in everyday situations.
+                      </p>
+                      <p className="font-semibold mb-2">Benefits include:</p>
+                      <ul className="list-disc pl-6 space-y-2">
+                        <li>Real-life KSL communication practice</li>
+                        <li>Increased confidence and fluency</li>
+                        <li>Direct engagement with the Deaf community</li>
+                      </ul>
+                    </section>
+
+                    <section>
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">Who Can Enroll?</h4>
+                      <p className="mb-4">Our programs are open to learners from all backgrounds, including:</p>
+                      <ul className="list-disc pl-6 space-y-2">
+                        <li>Individuals seeking Kenya Sign Language training</li>
+                        <li>Companies and corporate teams</li>
+                        <li>Children and adults</li>
+                        <li>Educators, caregivers, service providers, and advocates</li>
+                      </ul>
+                    </section>
+                  </div>
+                ) : program.title === "Community Empowerment" ? (
+                  <div className="space-y-8">
+                    <p>
+                      We partner with organizations, communities, and event organizers to build disability-inclusive spaces. Through participatory accessibility assessments, tailored trainings, and co-created solutions with persons with disabilities, we support inclusive, responsive, and community-owned initiatives.
+                    </p>
+
+                    <section>
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">Our Approach</h4>
+                      <div className="space-y-6">
+                        <div>
+                          <h5 className="font-semibold text-gray-900">Tailored Trainings</h5>
+                          <p>Practical disability inclusion and accessibility training.</p>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-gray-900">Inclusion-Led Facilitation</h5>
+                          <p>Sessions led by Disability Inclusion Facilitators, grounded in lived experience.</p>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-gray-900">Accessibility Assessments</h5>
+                          <p>Participatory reviews of physical, communication, digital, and attitudinal access.</p>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-gray-900">Co-Created Programs</h5>
+                          <p>Inclusive programs and events designed with persons with disabilities.</p>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-gray-900">Partnerships & Capacity Building</h5>
+                          <p>Collaborations that strengthen systems and sustain inclusive practice</p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                ) : (
+                  <>
+                    <p>
+                      Our {program.title} initiative is designed to create lasting impact through targeted interventions and community engagement. 
+                      We believe in a holistic approach that addresses not just immediate needs but also structural barriers to inclusion.
+                    </p>
+                  </>
+                )}
               </div>
               
               <div className="pt-6">

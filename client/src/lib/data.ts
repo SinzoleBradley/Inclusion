@@ -128,7 +128,7 @@ export const PROGRAMS: Program[] = [
   {
     id: 1,
     title: "Sign Language Training Sessions",
-    description: "Workshops and seminars for schools and businesses to foster inclusive environments.",
+    description: "We offer Basic and Advanced Kenya Sign Language (KSL) training for children and adults, designed for individual learners and organizations seeking inclusive communication skills.",
     category: "training",
     imageUrl: "/images/placeholder.png",
     gallery: [
@@ -143,7 +143,7 @@ export const PROGRAMS: Program[] = [
   {
     id: 2,
     title: "Community Empowerment",
-    description: "Grassroots initiatives supporting social and economic independence.",
+    description: "We partner with organizations, communities, and event organizers to build disability-inclusive spaces. Through participatory accessibility assessments, tailored trainings, and co-created solutions with persons with disabilities, we support inclusive, responsive, and community-owned initiatives.",
     category: "community",
     imageUrl: "/images/placeholder.png",
     gallery: [

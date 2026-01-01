@@ -91,6 +91,25 @@ export default function ProgramDetails() {
                   />
                 )}
               </div>
+
+              {program.title === "Sign Language Training Sessions" && (
+                <>
+                  <div className="rounded-2xl overflow-hidden shadow-lg">
+                    <img 
+                      src="/images/po.png" 
+                      alt="Program Poster 1" 
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                  <div className="rounded-2xl overflow-hidden shadow-lg">
+                    <img 
+                      src="/images/poi.png" 
+                      alt="Program Poster 2" 
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                </>
+              )}
             </div>
             
             <div className="space-y-6">

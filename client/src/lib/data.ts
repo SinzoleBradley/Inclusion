@@ -80,7 +80,7 @@ export const EVENTS = [  {
    location: "TBC",
    description: "An introductory course to Kenyan Sign Language (KSL) for individuals interested in learning basic communication skills.",
    category: "Training",
-   image: "/images/placeholder.png",
+   image: "/images/po.png",
     registrationLink: "https://forms.gle/ET2JUra4xDRTMpEr8"
   },
   {
@@ -91,7 +91,7 @@ export const EVENTS = [  {
     location: "TBC",
     description: "A fun and interactive sign language training designed specifically for children to learn basic KSL vocabulary and phrases.",
     category: "Training",
-    image: "/images/placeholder.png",
+    image: "/images/poi.png",
     registrationLink: "https://forms.gle/Edjd6zVSjxRDRRZd9"
   },
   //{

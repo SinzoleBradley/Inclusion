@@ -20,8 +20,10 @@ import heroVideo from "@assets/generated_videos/inclusive_community_in_africa_vi
 import { PILLARS } from "@/lib/data";
 import { PartnersCarousel } from "@/components/PartnersCarousel";
 import { EventsSlider } from "@/components/EventsSlider";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function Home() {
+  useSEO("Home", "Inclusion Bridge Africa empowers persons with disabilities through education, advocacy, and community support.");
   const { data: programs, isLoading: programsLoading } = usePrograms();
   const { data: stories } = useStories();
   const [isPlaying, setIsPlaying] = useState(true);

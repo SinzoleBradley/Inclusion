@@ -4,8 +4,10 @@ import { Home, Info, Heart, Mail, ArrowLeft, Search, BookOpen } from "lucide-rea
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import logoUrl from "@assets/logo.png";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function NotFound() {
+  useSEO("Page Not Found", "The page you are looking for does not exist.");
   const quickLinks = [
     { name: "Home", href: "/", icon: Home, description: "Back to the main landing page" },
     { name: "About Us", href: "/about", icon: Info, description: "Learn about our mission and vision" },

@@ -6,8 +6,10 @@ import { usePrograms } from "@/hooks/use-content";
 import { Loader2, CheckCircle2 } from "lucide-react";
 import { PILLARS } from "@/lib/data";
 import { Button } from "@/components/ui/button";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function Programs() {
+  useSEO("Our Programs", "Explore our programs focused on disability rights, inclusion, vocational training, and advocacy.");
   const { data: programs, isLoading } = usePrograms();
   const [location] = useLocation();
 

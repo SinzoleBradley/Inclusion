@@ -1,6 +1,8 @@
 import { SectionHeader } from "@/components/SectionHeader";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function Accessibility() {
+  useSEO("Accessibility", "Our commitment to digital accessibility and inclusivity for all users.");
   return (
     <div className="min-h-screen bg-background">
       <div className="relative pt-32 pb-20">

@@ -1,7 +1,9 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { useStories } from "@/hooks/use-content";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function Impact() {
+  useSEO("Our Impact", "Read inspiring stories of transformation and impact from our community and beneficiaries.");
   const { data: stories } = useStories();
 
   return (

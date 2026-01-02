@@ -10,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
+import { useSEO } from "@/hooks/use-seo";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -21,6 +22,7 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
+  useSEO("Contact Us", "Get in touch with Inclusion Bridge Africa for inquiries, partnerships, or support.");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 

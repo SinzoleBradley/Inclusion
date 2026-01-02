@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Loader2 } from "lucide-react";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function ProgramDetails() {
   const [, params] = useRoute("/programs/:id");
@@ -11,6 +12,11 @@ export default function ProgramDetails() {
   
   const programId = params?.id ? parseInt(params.id) : null;
   const program = programs?.find(p => p.id === programId);
+
+  useSEO(
+    program?.title || "Program Details",
+    program?.description || "Learn about our specific program and its impact."
+  );
 
   if (isLoading) {
     return (

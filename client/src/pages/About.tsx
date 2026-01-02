@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Linkedin, Twitter, Mail } from "lucide-react";
 import { PARTNERS } from "@/lib/data";
+import { useSEO } from "@/hooks/use-seo";
 
 // Mock Data for Team Members
 const TEAM_MEMBERS = [
@@ -57,6 +58,7 @@ const TEAM_MEMBERS = [
 ];
 
 export default function About() {
+  useSEO("About Us", "Learn about Inclusion Bridge Africa's mission, vision, and team dedicated to disability inclusion.");
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}

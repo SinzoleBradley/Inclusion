@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle2, Heart } from "lucide-react";
+import { useSEO } from "@/hooks/use-seo";
 
 const donateFormSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -20,6 +21,7 @@ const donateFormSchema = z.object({
 type DonateFormValues = z.infer<typeof donateFormSchema>;
 
 export default function Donate() {
+  useSEO("Donate", "Support Inclusion Bridge Africa with a donation to empower persons with disabilities.");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 

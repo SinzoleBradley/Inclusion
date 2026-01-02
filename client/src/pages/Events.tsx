@@ -5,8 +5,10 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Clock, ArrowRight, Bell } from "lucide-react";
 import { EVENTS, ANNOUNCEMENTS } from "@/lib/data";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function Events() {
+  useSEO("Events", "Join our upcoming events, workshops, and training sessions promoting disability inclusion.");
   return (
     <div className="min-h-screen bg-background">
       <div className="relative pt-32 pb-20">

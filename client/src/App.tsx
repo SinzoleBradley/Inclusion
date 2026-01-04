@@ -15,7 +15,7 @@ const Contact = lazy(() => import("@/pages/Contact"));
 const Accessibility = lazy(() => import("@/pages/Accessibility"));
 const ProgramDetails = lazy(() => import("@/pages/ProgramDetails"));
 const NotFound = lazy(() => import("@/pages/not-found"));
-// const Donate = lazy(() => import("@/pages/Donate"));
+const Donate = lazy(() => import("@/pages/Donate"));
 
 function Router() {
   return (
@@ -31,7 +31,7 @@ function Router() {
         <Route path="/programs/:id" component={ProgramDetails} />
         <Route path="/events" component={Events} />
         <Route path="/impact" component={Impact} />
-        {/* <Route path="/donate" component={Donate} /> */}
+        <Route path="/donate" component={Donate} />
         <Route path="/contact" component={Contact} />
         <Route path="/volunteer" component={Contact} /> {/* Reusing contact page for volunteer for now */}
         <Route path="/accessibility" component={Accessibility} />

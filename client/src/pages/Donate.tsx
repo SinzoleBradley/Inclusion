@@ -8,7 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { CheckCircle2, Heart } from "lucide-react";
+import { CheckCircle2, Heart, Smartphone } from "lucide-react"; // Added Smartphone icon
 import { useSEO } from "@/hooks/use-seo";
 
 const donateFormSchema = z.object({
@@ -36,8 +36,6 @@ export default function Donate() {
 
   function onSubmit(data: DonateFormValues) {
     setIsSubmitting(true);
-    // In a real app, this would integrate with Stripe/PayPal
-    // Here we treat it as a pledge/contact inquiry for donation
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -89,109 +87,132 @@ export default function Donate() {
 
       <section className="py-20 -mt-10">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* Impact Stats / Info */}
-            <div className="bg-white p-8 rounded-3xl shadow-xl border border-border space-y-8 h-fit">
-              <h3 className="text-2xl font-bold font-display text-primary">Why Donate?</h3>
-              <ul className="space-y-6">
-                {[
-                  { title: "Direct Impact", desc: "90% of funds go directly to program implementation." },
-                  { title: "Sustainability", desc: "We invest in long-term skills and community structures." },
-                  { title: "Transparency", desc: "We provide regular reports on how every dollar is used." }
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-secondary shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900">{item.title}</h4>
-                      <p className="text-muted-foreground text-sm">{item.desc}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-              <div className="p-6 bg-primary/5 rounded-xl border border-primary/10">
-                <p className="text-sm text-primary font-medium italic">
-                  "Inclusion Bridge gave me the skills to start my own business. Now I support my entire family." — Program Graduate
-                </p>
+          <div className="max-w-5xl mx-auto space-y-12">
+            
+            {/* Payment Details Card */}
+            <div className="bg-secondary/10 border-2 border-secondary/20 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+              <div className="flex items-center gap-4">
+                <div className="bg-secondary p-3 rounded-full">
+                  <Smartphone className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-primary">Direct Mobile Payment</h3>
+                  <p className="text-muted-foreground">Support us via M-PESA Paybill</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full md:w-auto">
+                <div className="text-center md:text-left">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Paybill</p>
+                  <p className="text-2xl font-black text-primary">542542</p>
+                </div>
+                <div className="text-center md:text-left">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Account No</p>
+                  <p className="text-2xl font-black text-primary">015101</p>
+                </div>
+                <div className="text-center md:text-left">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Recipient</p>
+                  <p className="text-lg font-bold text-primary leading-tight">Inclusion Bridge Africa</p>
+                </div>
               </div>
             </div>
 
-            {/* Form */}
-            <div className="bg-white p-8 rounded-3xl shadow-xl border border-border">
-              <h3 className="text-2xl font-bold font-display mb-6">Make a Pledge</h3>
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-netlify="true" name="donation-pledge">
-                  <input type="hidden" name="form-name" value="donation-pledge" />
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Full Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Jane Doe" className="h-12 rounded-xl" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email Address</FormLabel>
-                        <FormControl>
-                          <Input placeholder="jane@example.com" className="h-12 rounded-xl" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="amount"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Pledge Amount (Optional)</FormLabel>
-                        <FormControl>
-                          <Input placeholder="$50" className="h-12 rounded-xl" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message of Support</FormLabel>
-                        <FormControl>
-                          <Textarea placeholder="Why are you supporting us today?" className="min-h-[100px] rounded-xl resize-none" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <Button 
-                    type="submit" 
-                    className="w-full h-14 rounded-xl text-lg font-bold bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-lg shadow-secondary/20"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? "Submitting..." : (
-                      <>
-                        <Heart className="w-5 h-5 mr-2 fill-current" />
-                        Pledge Support
-                      </>
-                    )}
-                  </Button>
-                </form>
-              </Form>
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Impact Stats / Info */}
+              <div className="bg-white p-8 rounded-3xl shadow-xl border border-border space-y-8 h-fit">
+                <h3 className="text-2xl font-bold font-display text-primary">Why Donate?</h3>
+                <ul className="space-y-6">
+                  {[
+                    { title: "Direct Impact", desc: "90% of funds go directly to program implementation." },
+                    { title: "Sustainability", desc: "We invest in long-term skills and community structures." },
+                    { title: "Transparency", desc: "We provide regular reports on how every dollar is used." }
+                  ].map((item, i) => (
+                    <li key={i} className="flex gap-4">
+                      <CheckCircle2 className="w-6 h-6 text-secondary shrink-0" />
+                      <div>
+                        <h4 className="font-bold text-gray-900">{item.title}</h4>
+                        <p className="text-muted-foreground text-sm">{item.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+                <div className="p-6 bg-primary/5 rounded-xl border border-primary/10">
+                  <p className="text-sm text-primary font-medium italic">
+                    "Inclusion Bridge gave me the skills to start my own business. Now I support my entire family." — Program Graduate
+                  </p>
+                </div>
+              </div>
+
+              {/* Form */}
+              <div className="bg-white p-8 rounded-3xl shadow-xl border border-border">
+                <h3 className="text-2xl font-bold font-display mb-6">Make a Pledge</h3>
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Full Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="John Doe" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email Address</FormLabel>
+                          <FormControl>
+                            <Input placeholder="john@example.com" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="amount"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Pledge Amount (Optional)</FormLabel>
+                          <FormControl>
+                            <Input placeholder="e.g. 5,000 KES" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Message</FormLabel>
+                          <FormControl>
+                            <Textarea 
+                              placeholder="Tell us why you are supporting our cause..." 
+                              className="min-h-[120px]"
+                              {...field} 
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <Button type="submit" className="w-full h-12 text-lg" disabled={isSubmitting}>
+                      {isSubmitting ? "Submitting..." : "Send Pledge"}
+                    </Button>
+                  </form>
+                </Form>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 }

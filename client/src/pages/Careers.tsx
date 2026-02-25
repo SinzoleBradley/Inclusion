@@ -185,73 +185,6 @@ export default function Careers() {
             ))}
           </div>
         </section>
-
-        {/* How to Apply */}
-        <section>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground">
-              How to Apply (All Positions)
-            </h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              Interested and qualified candidates are invited to apply by
-              submitting the following documents:
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto bg-card border border-border rounded-2xl p-8 shadow-sm">
-            <ul className="list-disc list-inside space-y-3 text-muted-foreground mb-6">
-              <li>
-                An application letter clearly stating the position title and
-                reference number
-              </li>
-              <li>
-                A current Curriculum Vitae (CV) with reliable contact details
-              </li>
-              <li>
-                Copies of relevant academic and professional certificates (where
-                applicable)
-              </li>
-            </ul>
-            <p className="flex items-center justify-center text-lg font-semibold text-primary mb-4 p-4 bg-primary/5 rounded-xl">
-              <Mail className="w-5 h-5 mr-2" />
-              Applications should be submitted via email to:{" "}
-              <a
-                href="mailto:hello@inclusionbridgeafrica.org"
-                className="underline ml-2 hover:text-primary/80 transition-colors"
-              >
-                hello@inclusionbridgeafrica.org
-              </a>
-            </p>
-            <p className="text-center text-sm text-muted-foreground mb-6">
-              <span className="font-semibold text-foreground">
-                Application Deadline:
-              </span>{" "}
-              3 March 2026
-            </p>
-            <div className="border-t border-border pt-6 mt-6">
-              <h3 className="text-xl font-semibold text-foreground mb-3">
-                Important Information
-              </h3>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground text-sm">
-                <li>Each applicant may apply for one position only.</li>
-                <li>
-                  Applications received after the deadline will not be
-                  considered.
-                </li>
-                <li>Only shortlisted candidates will be contacted.</li>
-                <li>
-                  The recruitment process may include interviews and/or
-                  practical assessments depending on the role.
-                </li>
-                <li>
-                  Inclusion Bridge Africa is an equal opportunity employer and
-                  encourages applications from all qualified candidates,
-                  including persons with disabilities.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
       </div>
 
       {/* --- MODAL DIALOG --- */}
@@ -368,12 +301,86 @@ export default function Careers() {
                   ))}
                 </ul>
               </div>
+
+              {/* How to Apply Section - Integrated into Modal */}
+              <div className="mt-8 pt-8 border-t border-border">
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-foreground">
+                    How to Apply
+                  </h3>
+                  <p className="text-muted-foreground mt-2">
+                    Interested and qualified candidates are invited to apply by
+                    submitting the following documents:
+                  </p>
+                </div>
+
+                <div className="bg-muted/30 border border-border rounded-xl p-6 shadow-sm">
+                  <ul className="list-disc list-inside space-y-3 text-muted-foreground mb-6">
+                    <li>
+                      An application letter clearly stating the position title and
+                      reference number
+                    </li>
+                    <li>
+                      A current Curriculum Vitae (CV) with reliable contact details
+                    </li>
+                    <li>
+                      Copies of relevant academic and professional certificates (where
+                      applicable)
+                    </li>
+                  </ul>
+                  
+                  <div className="flex flex-col items-center justify-center p-4 bg-background border border-border rounded-xl mb-4 text-center">
+                    <div className="flex items-center text-lg font-semibold text-primary mb-1">
+                      <Mail className="w-5 h-5 mr-2" />
+                      Applications should be submitted via email to:
+                    </div>
+                    <a
+                      href={`mailto:hello@inclusionbridgeafrica.org?subject=${encodeURIComponent(
+                        `Application: ${selectedJob.title} (${selectedJob.referenceNo})`
+                      )}`}
+                      className="text-foreground underline hover:text-primary transition-colors mt-2"
+                    >
+                      hello@inclusionbridgeafrica.org
+                    </a>
+                  </div>
+
+                  <p className="text-center text-sm text-muted-foreground mb-6">
+                    <span className="font-semibold text-foreground">
+                      Application Deadline:
+                    </span>{" "}
+                    3 March 2026
+                  </p>
+
+                  <div className="border-t border-border pt-4 mt-4">
+                    <h4 className="text-sm font-semibold text-foreground mb-3">
+                      Important Information
+                    </h4>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground text-xs">
+                      <li>Each applicant may apply for one position only.</li>
+                      <li>
+                        Applications received after the deadline will not be
+                        considered.
+                      </li>
+                      <li>Only shortlisted candidates will be contacted.</li>
+                      <li>
+                        The recruitment process may include interviews and/or
+                        practical assessments depending on the role.
+                      </li>
+                      <li>
+                        Inclusion Bridge Africa is an equal opportunity employer and
+                        encourages applications from all qualified candidates,
+                        including persons with disabilities.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Modal Footer */}
             <div className="p-6 border-t border-border bg-muted/30 rounded-b-2xl shrink-0 flex flex-col sm:flex-row items-center justify-between gap-4">
               <p className="text-sm text-muted-foreground font-medium">
-                Deadline: 3 March 2026
+                Make sure to include your CV and certificates.
               </p>
               <a
                 href={`mailto:hello@inclusionbridgeafrica.org?subject=${encodeURIComponent(

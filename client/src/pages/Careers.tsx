@@ -12,6 +12,7 @@ import {
   X,
   ClipboardList,
   UserCheck,
+  Download,
 } from "lucide-react";
 
 // Define the Job interface for TypeScript support
@@ -152,6 +153,40 @@ export default function Careers() {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 py-20">
+
+        {/* --- NEW POSTER SECTION --- */}
+        <section className="mb-24">
+          <div className="max-w-4xl mx-auto bg-muted/30 border border-border rounded-3xl p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8 shadow-sm">
+            <div className="w-full md:w-1/2">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                We're Hiring!
+              </h2>
+              <p className="text-muted-foreground mb-6 text-lg">
+                Help us spread the word. Download our official recruitment poster to share with your network, local community centers, or anyone who might be a great fit for our team.
+              </p>
+              <a
+                href="/images/poster.jpg" // MAKE SURE THIS MATCHES YOUR FILE PATH
+                download="IBA_Hiring_Poster.jpeg" // THIS IS THE NAME IT WILL SAVE AS
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-all shadow-sm group w-full sm:w-auto"
+              >
+                <Download className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
+                Download Poster
+              </a>
+            </div>
+            
+            {/* Poster Preview */}
+            <div className="w-full md:w-1/2 flex justify-center">
+              <div className="relative rounded-xl overflow-hidden border-4 border-background shadow-xl rotate-2 hover:rotate-0 transition-all duration-300">
+                <img 
+                  src="/images/poster.jpeg" // MAKE SURE THIS MATCHES YOUR FILE PATH
+                  alt="IBA_Hiring_Poster.jpeg" 
+                  className="w-full max-w-xs object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* --- END POSTER SECTION --- */}
 
         {/* Current Openings */}
         <section className="mb-24">
@@ -397,29 +432,6 @@ export default function Careers() {
           </div>
         </div>
       )}
-    </div>
-  );
-}
-
-// Helper component for the "Why Work With Us" cards
-function FeatureCard({
-  icon,
-  title,
-  description,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="p-6 rounded-2xl border border-border bg-card hover:shadow-lg transition-shadow duration-300 group">
-      <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-        {React.cloneElement(icon as React.ReactElement, {
-          className: "w-6 h-6",
-        })}
-      </div>
-      <h3 className="text-xl font-semibold text-foreground mb-3">{title}</h3>
-      <p className="text-muted-foreground leading-relaxed">{description}</p>
     </div>
   );
 }

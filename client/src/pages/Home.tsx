@@ -1,7 +1,10 @@
 import { useState, useRef } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowRight, Users, BookOpen, Heart, Award, Pause, Play, MessageSquare, Megaphone, Handshake, CheckCircle2 } from "lucide-react";
+import { 
+  ArrowRight, Users, BookOpen, Heart, Award, Pause, Play, 
+  MessageSquare, Megaphone, Handshake, CheckCircle2 
+} from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -217,6 +220,64 @@ export default function Home() {
         </div>
         
         <PartnersCarousel />
+      </section>
+
+      {/* SDGs SECTION */}
+      <section className="py-20 bg-white border-y border-gray-100 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <SectionHeader
+            title="Sustainable Development Goals"
+            subtitle="Our initiatives strongly align with the UN SDGs, driving global progress through local inclusion."
+            centered
+          />
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 mt-12 justify-center max-w-5xl mx-auto">
+            {[
+              { id: 4, title: 'Quality Education', color: '#C5192D', imageUrl: '/images/QE.png' },
+              { id: 8, title: 'Decent Work & Economic Growth', color: '#A21942', imageUrl: '/images/DW.png' },
+              { id: 9, title: 'Industry, Innovation & Infrastructure', color: '#FD6925', imageUrl: '/images/III.png' },
+              { id: 10, title: 'Reduced Inequalities', color: '#DD1367', imageUrl: '/images/RI.png' },
+              { id: 16, title: 'Peace, Justice & Strong Institutions', color: '#00689D', imageUrl: '/images/PJ.png' },
+            ].map((sdg) => (
+              <motion.div
+                key={sdg.id}
+                whileHover={{ y: -5 }}
+                className="group cursor-pointer"
+              >
+                {/* IF YOUR IMAGE URLs ARE THE FULL SQUARE UN TILES, USE THIS INSTEAD:
+                  
+                  <div className="w-full aspect-square rounded-sm overflow-hidden shadow-md transition-all duration-300 group-hover:shadow-2xl">
+                    <img src={sdg.imageUrl} alt={`SDG ${sdg.id}: ${sdg.title}`} className="w-full h-full object-cover" />
+                  </div>
+                */}
+
+                {/* CSS Layout replacing the icon with your custom image URL */}
+                <div 
+                  className="w-full aspect-square relative flex flex-col p-3 shadow-md transition-all duration-300 group-hover:shadow-2xl group-hover:brightness-110"
+                  style={{ backgroundColor: sdg.color }}
+                >
+                  <div className="flex items-start gap-1.5 z-10">
+                    <span className="text-3xl md:text-4xl font-black text-white leading-none tracking-tighter font-sans">
+                      {sdg.id}
+                    </span>
+                    <span className="text-[9px] md:text-[11px] font-bold text-white uppercase leading-tight mt-0.5 tracking-wide max-w-[80%]">
+                      {sdg.title}
+                    </span>
+                  </div>
+                  
+                  <div className="absolute inset-0 flex items-end justify-center pb-4 z-0">
+                    {/* Image replaces the Lucide icon here */}
+                    <img 
+                      src={sdg.imageUrl} 
+                      alt={`${sdg.title} icon`} 
+                      className="w-16 h-16 md:w-20 md:h-20 object-contain opacity-95" 
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* MISSION / WHO WE ARE */}

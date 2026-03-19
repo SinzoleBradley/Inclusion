@@ -299,62 +299,72 @@ export default function Home() {
             subtitle="Holistic programs designed to create sustainable change."
           />
 
-          {programsLoading ? (
-            <div className="grid md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((i) => (
-                <div
-                  key={i}
-                  className="h-96 bg-gray-200 rounded-2xl animate-pulse"
-                />
-              ))}
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {programs?.map((program) => (
-                <ProgramCard key={program.id} program={program} />
-              )) || (
-                // Fallback content if API is empty
-                <>
-                  <ProgramCard
-                    program={{
-                      id: 1,
-                      title: "Inclusive Education",
-                      description:
-                        "Ensuring children with disabilities access quality education through teacher training and accessible resources.",
-                      category: "Education",
-                      imageUrl:
-                        "/images/placeholder.png",
-                      gallery: [],
-                    }}
-                  />
-                  <ProgramCard
-                    program={{
-                      id: 2,
-                      title: "Vocational Skills",
-                      description:
-                        "Technical training and mentorship to support entrepreneurship and employment readiness.",
-                      category: "Livelihood",
-                      imageUrl:
-                        "/images/placeholder.png",
-                      gallery: [],
-                    }}
-                  />
-                  <ProgramCard
-                    program={{
-                      id: 3,
-                      title: "Advocacy & Rights",
-                      description:
-                        "Workshops and campaigns to promote policy change and community awareness.",
-                      category: "Advocacy",
-                      imageUrl:
-                        "/images/placeholder.png",
-                      gallery: [],
-                    }}
-                  />
-                </>
+          <div className="-mx-4 px-4 overflow-x-auto lg:overflow-x-visible no-scrollbar">
+            <div className="flex lg:grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-4">
+              {programsLoading ? (
+                <div className="flex gap-8">
+                  {[1, 2, 3].map((i) => (
+                    <div
+                      key={i}
+                      className="w-80 flex-shrink-0 h-96 bg-gray-200 rounded-2xl animate-pulse md:w-auto"
+                    />
+                  ))}
+                </div>
+              ) : (
+                programs?.map((program) => (
+                  <div key={program.id} className="w-80 flex-shrink-0 md:w-auto">
+                    <ProgramCard program={program} />
+                  </div>
+                )) || (
+                  // Fallback content if API is empty
+                  <div className="flex gap-8">
+                    <div className="w-80 flex-shrink-0 md:w-auto">
+                      <ProgramCard
+                        program={{
+                          id: 1,
+                          title: "Inclusive Education",
+                          description:
+                            "Ensuring children with disabilities access quality education through teacher training and accessible resources.",
+                          category: "Education",
+                          imageUrl:
+                            "/images/placeholder.png",
+                          gallery: [],
+                        }}
+                      />
+                    </div>
+                    <div className="w-80 flex-shrink-0 md:w-auto">
+                      <ProgramCard
+                        program={{
+                          id: 2,
+                          title: "Vocational Skills",
+                          description:
+                            "Technical training and mentorship to support entrepreneurship and employment readiness.",
+                          category: "Livelihood",
+                          imageUrl:
+                            "/images/placeholder.png",
+                          gallery: [],
+                        }}
+                      />
+                    </div>
+                    <div className="w-80 flex-shrink-0 md:w-auto">
+                      <ProgramCard
+                        program={{
+                          id: 3,
+                          title: "Advocacy & Rights",
+                          description:
+                            "Workshops and campaigns to promote policy change and community awareness.",
+                          category: "Advocacy",
+                          imageUrl:
+                            "/images/placeholder.png",
+                          gallery: [],
+                        }}
+                      />
+                    </div>
+                  </div>
+                )
               )}
             </div>
-          )}
+          </div>
 
           <div className="text-center mt-12">
             <Link href="/programs">

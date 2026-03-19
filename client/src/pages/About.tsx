@@ -20,13 +20,19 @@ const TEAM_MEMBERS = [
     image: "/team/roslyn.jpeg",
   },
   {
+    name: "Maxwell Mugeyi",
+    role: "Director",
+    bio: "",
+    image: "/images/placeholder.png",
+  },
+  {
     name: "Rev Ignitius Malimo",
     role: "Board Member",
     bio: "",
     image: "/team/ignitius.png",
   },
   {
-    name: "Rev Edwin Masai",
+    name: "Rev. Edwin Masai",
     role: "Disability Inclusion Advisor",
     bio: "",
     image: "/team/rev.jpg",
@@ -48,12 +54,6 @@ const TEAM_MEMBERS = [
     role: "Disability Inclusion Facilitator",
     bio: "",
     image: "/team/macnum.jpeg",
-  },
-  {
-    name: "Bradley Sinzole",
-    role: "IT Specialist",
-    bio: "",
-    image: "/team/brad.jpg",
   },
 ];
 

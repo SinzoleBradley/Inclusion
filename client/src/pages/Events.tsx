@@ -62,7 +62,7 @@ export default function Events() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Upcoming Events & Trainings</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {EVENTS.map((event) => (
               <Card key={event.id} className="flex flex-col h-full overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="h-48 overflow-hidden relative group">
@@ -82,7 +82,7 @@ export default function Events() {
                   <div className="space-y-2 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-primary" />
-                        {/* <span>{event.date}</span> */}
+                        <span>{event.date}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Clock className="w-4 h-4 text-primary" />

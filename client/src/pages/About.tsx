@@ -9,13 +9,13 @@ import { useSEO } from "@/hooks/use-seo";
 const TEAM_MEMBERS = [
   {
     name: "Victor Mbatia",
-    role: "Co-Director IBA",
+    role: "Founder",
     bio: "",
     image: "/team/victor.jpeg",
   },
   {
     name: "Roslyn Njuguna",
-    role: "Co-Director IBA",
+    role: "Founder",
     bio: "",
     image: "/team/roslyn.jpeg",
   },
@@ -23,7 +23,7 @@ const TEAM_MEMBERS = [
     name: "Maxwell Mugeyi",
     role: "Director",
     bio: "",
-    image: "/images/placeholder.png",
+    image: "/team/max.jpeg",
   },
   {
     name: "Rev Ignitius Malimo",

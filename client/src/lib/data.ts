@@ -226,16 +226,106 @@ export const PROGRAMS: Program[] = [
 export const STORIES = [
   {
     id: 1,
-    title: "Finding My Voice",
-    content: "Through the advocacy program, I learned to speak up for my rights and now mentor others.",
-    beneficiaryName: "Sarah M.",
-    imageUrl: "/images/placeholder.png"
+    title: "International Day of Deaf Parents in Kenya 2026",
+    content: "For the first time, I felt that Deaf parents had a space where our experiences were understood and our ideas mattered. The discussions gave me confidence to engage more actively in my child's education",
+    longContent: "On 26 April 2026, Inclusion Bridge Africa hosted Kenya's first-ever celebration of the International Day of Deaf Parents, creating a unique platform for Deaf parents, Children of Deaf Adults (CODAs), disability advocates, educators, and other stakeholders to engage in meaningful dialogue on parenting, communication, and inclusion.\n\nThe event responded to a longstanding gap: despite the critical role Deaf parents play in raising and supporting their children, their experiences and perspectives are often overlooked in policy discussions, education systems, and public service delivery. Through structured discussions and participatory group sessions, participants explored barriers affecting Deaf families, including communication challenges, access to education, public services, co-parenting dynamics, and the evolving demands of modern parenting.\n\nParticular attention was given to the implications of Kenya's Competency-Based Curriculum (CBC), which requires active parental involvement in children's education. Participants highlighted the need for schools and education stakeholders to adopt accessible communication approaches that enable Deaf parents to fully participate in their children's learning journey.\n\nOur Commitment: Building on the success of this inaugural event, Inclusion Bridge Africa will scale up future celebrations to ensure more Deaf parents and families across Kenya have an opportunity to contribute their voices and experiences. The organization will also engage duty bearers, education stakeholders, and relevant government agencies to promote the implementation of recommendations generated during the discussions and strengthen inclusive parenting practices nationwide.",
+    beneficiaryName: "Deaf Parent",
+    reflection: "For the first time, I felt that Deaf parents had a space where our experiences were understood and our ideas mattered. The discussions gave me confidence to engage more actively in my child's education.",
+    imageUrl: "/images/Parent.jpg",
+    gallery: [
+      { type: 'image', src: '/images/Parent.jpg' },
+      { type: 'image', src: '/images/p1.jpg' },
+      { type: 'image', src: '/images/p2.jpg' },
+      { type: 'image', src: '/images/p3.jpg' },
+      { type: 'image', src: '/images/p4.jpg' },
+      { type: 'image', src: '/images/p5.jpg' }
+    ],
+    outcomes: [
+      "Created Kenya's first dedicated platform for celebrating and discussing the experiences of Deaf parents.",
+      "Increased awareness of barriers faced by Deaf parents in education, healthcare, and public service access.",
+      "Strengthened collaboration between Deaf families, CODAs, disability advocates, and service providers.",
+      "Generated practical recommendations aimed at improving accessibility and family inclusion."
+    ],
+    longTermImpact: "The event established a foundation for sustained advocacy on Deaf parenting and family inclusion. It also highlighted the importance of involving Deaf parents in decisions that affect their families and communities."
   },
   {
     id: 2,
-    title: "Skills for Life",
-    content: "The vocational training gave me the skills to start my own tailoring business.",
-    beneficiaryName: "David O.",
-    imageUrl: "/images/placeholder.png"
+    title: "Disaster Preparedness, Response and Evacuation Training",
+    content: "I now understand what actions to take during an emergency and how to help others around me. The practical drills made the lessons easy to understand and apply.",
+    longContent: "Climate change continues to increase the frequency and severity of disasters across Kenya and the African continent. Communities are experiencing more frequent floods, droughts, landslides, storms, heat waves, and disease outbreaks, with persons with disabilities often facing disproportionate risks due to inaccessible information systems, barriers to evacuation, and exclusion from disaster planning processes.\n\nRecognizing these challenges, Inclusion Bridge Africa conducted a two-day Disaster Preparedness, Response and Evacuation Training for Deaf persons, focusing on fire safety, emergency preparedness, occupational health and safety, and climate-related disaster resilience.\n\nThe training combined practical and theoretical learning, including emergency preparedness sessions, fire safety awareness, evacuation drills, hazard identification exercises, and discussions on participants' lived experiences during disasters such as flooding. Participants explored strategies for protecting themselves, their families, and their communities during emergencies.\n\nA key discussion centered on the unique challenges faced by Deaf persons during disasters. Participants highlighted how inaccessible early warning systems, emergency broadcasts without sign language interpretation, and limited access to emergency information significantly increase vulnerability during crises.\n\nOur Commitment: Inclusion Bridge Africa will continue advocating for disability-inclusive climate action and disaster risk reduction initiatives. Priority areas include:\n• Accessible early warning systems incorporating Kenyan Sign Language, visual alerts, and SMS notifications.\n• Sign language interpretation and captioning during emergency broadcasts.\n• Greater participation of Deaf persons and organizations of persons with disabilities in disaster planning and decision-making.\n• Capacity building for emergency responders on disability inclusion and accessible communication.\n• Regular community-based disaster preparedness and evacuation drills.",
+    beneficiaryName: "Participant",
+    reflection: "I now understand what actions to take during an emergency and how to help others around me. The practical drills made the lessons easy to understand and apply.",
+    imageUrl: "/images/poi7.png",
+    gallery: [
+      { type: 'image', src: '/images/poi7.png' },
+      { type: 'image', src: '/images/F.JPG' },
+      { type: 'image', src: '/images/F1.JPG' },
+      { type: 'image', src: '/images/F2.JPG' },
+      { type: 'image', src: '/images/F3.JPG' },
+      { type: 'image', src: '/images/F4.JPG' },
+      { type: 'image', src: '/images/F5.JPG' },
+      { type: 'image', src: '/images/F6.JPG' },
+      { type: 'image', src: '/images/F7.JPG' },
+      { type: 'image', src: '/images/F8.JPG' },
+    ],
+    outcomes: [
+      "Improved participants' knowledge of emergency preparedness and response procedures.",
+      "Increased awareness of climate-related disaster risks and their impact on persons with disabilities.",
+      "Strengthened participants' ability to identify hazards and respond appropriately during emergencies.",
+      "Promoted understanding of disability-inclusive disaster risk reduction approaches."
+    ],
+    longTermImpact: "The training contributed to building a more informed and resilient Deaf community capable of actively participating in disaster preparedness and response efforts. Participants also developed a stronger understanding of the importance of accessible communication during emergencies."
+  },
+  {
+    id: 3,
+    title: "World Autism Day 2026",
+    content: "The event reminded us that autism is not a limitation. Every child has talents and abilities that deserve recognition and support.",
+    longContent: "On 2 April 2026, Inclusion Bridge Africa partnered with Great for Greatness CBO and community stakeholders to commemorate World Autism Day under the theme \"Autism and Humanity – Every Life Has Value.\"\n\nThe event brought together children, parents, caregivers, educators, and community members to celebrate neurodiversity while raising awareness about the importance of acceptance, inclusion, and equal opportunities for autistic individuals.\n\nThrough interactive sessions, participants explored practical strategies for supporting neurodivergent children in education, family life, and community participation. The event also showcased the talents and abilities of children through art, music, and urban farming activities, demonstrating that every child has unique strengths that should be recognized and nurtured.\n\nOur Commitment: Inclusion Bridge Africa will continue promoting autism inclusion through awareness campaigns, caregiver support initiatives, and advocacy efforts aligned with recommendations advanced by autism stakeholders globally, including:\n• Increased access to inclusive education.\n• Greater community awareness and acceptance of neurodiversity.\n• Enhanced support services for autistic children and their families.\n• Increased opportunities for skills development, self-expression, and participation in community life.\n• Stronger collaboration among parents, educators, healthcare providers, and disability organizations.",
+    beneficiaryName: "Parent",
+    reflection: "The event reminded us that autism is not a limitation. Every child has talents and abilities that deserve recognition and support.",
+    imageUrl: "/images/A.jpg",
+    gallery: [
+      { type: 'image', src: '/images/A.jpg' },
+      { type: 'image', src: '/images/A1.jpg' },
+      { type: 'image', src: '/images/A2.jpg' },
+      { type: 'image', src: '/images/A3.jpg' },
+      { type: 'image', src: '/images/A4.jpg' },
+      { type: 'image', src: '/images/A5.jpg' },
+      { type: 'image', src: '/images/A6.jpg' },
+      { type: 'image', src: '/images/A7.jpg' }
+    ],
+    outcomes: [
+      "Increased awareness and understanding of autism among parents, caregivers, and community members.",
+      "Promoted positive attitudes toward neurodiversity and inclusion.",
+      "Strengthened support networks for families raising autistic children.",
+      "Provided opportunities for children to showcase their talents and abilities."
+    ],
+    longTermImpact: "The event contributed to reducing stigma and encouraging greater acceptance of neurodivergent individuals within families, schools, and communities."
+  },
+  {
+    id: 4,
+    title: "Technology and Digital Safety Training",
+    content: "This training opened my eyes to opportunities in technology. I now feel more confident exploring digital skills and protecting myself online.",
+    longContent: "As technology increasingly shapes access to education, employment, entrepreneurship, and civic participation, many Deaf persons continue to face barriers in accessing digital skills training and technology-related opportunities.\n\nTo address this gap, Inclusion Bridge Africa, in partnership with All Saints' Cathedral Nairobi and The Shield Maidens, conducted a Technology and Digital Safety Training for Deaf.\n\nThe training provided practical skills on digital literacy, online safety, cybersecurity awareness, privacy protection, responsible social media engagement, and safe internet use. Participants engaged in hands-on learning sessions designed to build confidence and strengthen their ability to navigate digital spaces safely and effectively.\n\nA recurring concern raised by participants was the limited access to information about technology courses, digital learning opportunities, and career pathways within the technology sector. Many expressed a desire to pursue careers in technology but lacked access to accessible information and mentorship networks.\n\nOur Commitment: Inclusion Bridge Africa will establish a community of Deaf technology enthusiasts to facilitate the sharing of information on digital skills training, scholarships, internships, employment opportunities, and emerging technologies.\nAdditionally, the organization will work towards creating the first network of Deaf Digital Safety and Cybersecurity Ambassadors, equipping participants with advanced skills and empowering them to champion digital safety, cybersecurity awareness, and responsible technology use within their communities.\nThrough this initiative, Deaf persons will not only become consumers of technology but also innovators, educators, and leaders shaping a safer and more inclusive digital future.",
+    beneficiaryName: "Participant",
+    reflection: "This training opened my eyes to opportunities in technology. I now feel more confident exploring digital skills and protecting myself online.",
+    imageUrl: "/images/poi2.jpeg",
+    gallery: [
+      { type: 'image', src: '/images/poi2.jpeg' },
+      { type: 'image', src: '/images/T.JPG' },
+      { type: 'image', src: '/images/T2.JPG' },
+      { type: 'image', src: '/images/T3.JPG' },
+      { type: 'image', src: '/images/T4.JPG' },
+      { type: 'image', src: '/images/T5.JPG' },
+      { type: 'image', src: '/images/T6.JPG' },
+    ],
+    outcomes: [
+      "Improved digital literacy and cybersecurity awareness among Deaf participants.",
+      "Increased confidence in using technology for learning, communication, and professional growth.",
+      "Strengthened awareness of online safety and digital wellbeing.",
+      "Identified growing interest among Deaf youth in technology-related careers and entrepreneurship."
+    ],
+    longTermImpact: "The training laid the groundwork for a more digitally empowered Deaf community and highlighted the importance of ensuring equal access to technology education and opportunities."
   }
 ];
+

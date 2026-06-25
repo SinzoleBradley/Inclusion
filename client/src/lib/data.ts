@@ -94,58 +94,6 @@ export const EVENTS = [  {
     image: "/images/poi.png",
     registrationLink: "https://forms.gle/Edjd6zVSjxRDRRZd9"
   },
-   {
-    id: 2,
-    title: "Leadership & Advocacy Training",
-    date: "April 18th and 25th, 2026",
-    time: "8:00 AM - 3:00 PM",
-    location: "All Saints' Cathedral, Nairobi",
-    description: "A training focused on building leadership skills, advocacy strategies, and rights-based approaches for persons with disabilities to amplify their voices and drive change in their communities.",
-    category: "Training",
-    image: "/images/poi3.jpeg",
-    registrationLink: "https://forms.gle/gRxWHQT698WcEifeA"
-  },
-  {
-    id: 3,
-    title: "Technology & Digital Inclusion Training",
-    date: "June 20th and 27th, 2026",
-    time: "8:00 AM - 3:00 PM",
-    location: "All Saints' Cathedral, Nairobi",
-    description: "A comprehensive training on assistive technologies, digital accessibility, and inclusive design principles to enhance digital literacy and access for persons with disabilities.",
-    category: "Training",
-    image: "/images/poi2.jpeg",
-    registrationLink: "https://forms.gle/igmQ8RaiF2XSv6Yk6"
-  },
-   {
-    id: 4,
-    title: "Unstoppable Voices - Advancing Rights and Justice for All Women",
-    date: "March 12th, 2026",
-    time: "9:30 AM - 10:30 PM",
-    location: "Nairobi, Kenya",
-    description: "A panel discussion and advocacy event focused on advancing the rights, visibility, and meaningful",
-    category: "Training",
-    image: "/images/poi4.jpeg",
-  },
-  {
-    id: 5,
-    title: "Safeguarding Young Minds: Addressing Child Abuse and Building Resilience",
-    date: "March 12th, 2026",
-    time: "12:30 AM - 2:00 PM",
-    location: "Webinar",
-    description: "A webinar focused on raising awareness about child abuse, providing strategies for prevention, and building resilience among children and caregivers.",
-    category: "Training",
-    image: "/images/poi5.jpeg",
-  },
-  {
-    id: 5,
-    title: "Inclusive Disaster Management Training",
-    date: "May 30th & June 6th, 2026",
-    time: "9:00 AM - 1:00 PM",
-    location: "All Saints' Cathedral, Nairobi",
-    description: "A training focused on inclusive disaster preparedness, response, and recovery strategies to ensure that persons with disabilities are included and supported during emergencies.",
-    category: "Training",
-    image: "/images/poi7.png",
-  },
 ];
 
 export const ANNOUNCEMENTS = [
